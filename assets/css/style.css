@@ -1,0 +1,70 @@
+body {
+    background-color: #272f38;
+}
+
+main{
+    padding-top: 3rem;
+}
+
+.container
+{
+    background-color: #e9ebee;
+    min-height: calc( 100vh - 72px );
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.datos{
+    height: 35vh;
+    text-align: center;
+}
+
+.datos button{
+    border-radius: 50%;
+}
+
+.profile {
+    background-image: url("../img/profile.jpg");
+    width: 150px;
+    height: 150px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+    margin: 15px auto;
+}
+
+hr{
+    width: 50%;
+}
+
+#projects .header {
+    text-align: center;
+}
+
+#projects .header hr {
+    border-top: 2px solid rgba(0,0,0,0.4);
+    width: 50px;
+}
+
+.project{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.back
+{
+    text-align: right;
+}
+
+.nav-pills > .nav-item > .active {
+    background-color: #6c757d;
+}
+
+.nav-item > a{
+    color: white;
+}
+
+.nav-item > a:hover {
+    color: #6c757d;
+}
