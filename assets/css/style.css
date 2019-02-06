@@ -1,5 +1,12 @@
+:root {
+    --color-bg: #272f38;
+    --color-pastel: #e9ebee;
+    --color-gray: #6c757d;
+    --color-text: #212529;
+}
+
 body {
-    background-color: #272f38;
+    background-color: var(--color-bg);
 }
 
 main{
@@ -8,7 +15,7 @@ main{
 
 .container
 {
-    background-color: #e9ebee;
+    background-color: var(--color-pastel);
     min-height: calc( 100vh - 72px );
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -17,10 +24,6 @@ main{
 .datos{
     height: 35vh;
     text-align: center;
-}
-
-.datos button{
-    border-radius: 50%;
 }
 
 .profile {
@@ -36,6 +39,31 @@ main{
 
 hr{
     width: 50%;
+}
+
+.rdContainer{
+    margin: 5px auto;
+}
+
+.rdIcon
+{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: var(--color-text);
+    background-color: var(--color-pastel);
+    font-size: 22px;
+    margin: 0 auto;
+    transition: background-color 0.3s ease-out;
+    text-align: center;
+    cursor: pointer;
+    padding: 9px;
+    float: left;
+    margin: 0 10px;
+}
+
+.rdIcon:focus, .rdIcon:hover {
+    background-color: var(--color-gray);
 }
 
 #projects .header {
@@ -58,7 +86,7 @@ hr{
 }
 
 .nav-pills > .nav-item > .active {
-    background-color: #6c757d;
+    background-color: var(--color-gray);
 }
 
 .nav-item > a{
@@ -66,5 +94,10 @@ hr{
 }
 
 .nav-item > a:hover {
-    color: #6c757d;
+    color: var(--color-gray);
+}
+
+.badge-cundalf{
+    background-color: var(--color-bg);
+    color: white;
 }
