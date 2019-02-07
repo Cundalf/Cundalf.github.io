@@ -80,6 +80,16 @@ hr{
     margin-bottom: 2rem;
 }
 
+.imgProjects
+{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: none;
+    width: 100%;
+    height: 100%;
+}
+
 .back
 {
     text-align: right;
