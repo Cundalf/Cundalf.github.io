@@ -22,7 +22,7 @@ main{
 }
 
 .datos{
-    height: 35vh;
+    height: auto;
     text-align: center;
 }
 
@@ -76,8 +76,8 @@ hr{
 }
 
 .project{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
+    margin-top: 4rem;
+    margin-bottom: 4rem;
 }
 
 .imgProjects
