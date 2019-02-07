@@ -17,8 +17,7 @@ main{
 {
     background-color: var(--color-pastel);
     min-height: calc( 100vh - 72px );
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding: 25px;
 }
 
 .datos{
@@ -64,13 +63,14 @@ hr{
 
 .rdIcon:focus, .rdIcon:hover {
     background-color: var(--color-gray);
+    color: var(--color-pastel);
 }
 
-#projects .header {
+.header {
     text-align: center;
 }
 
-#projects .header hr {
+.header hr {
     border-top: 2px solid rgba(0,0,0,0.4);
     width: 50px;
 }
@@ -110,4 +110,17 @@ hr{
 .badge-cundalf{
     background-color: var(--color-bg);
     color: white;
+}
+
+.about{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.about a{
+    margin: 0 5px;
+}
+
+.about .lead{
+    margin: 20px 0;
 }
