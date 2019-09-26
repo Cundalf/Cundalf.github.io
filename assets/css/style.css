@@ -49,11 +49,26 @@ p.lead {
   background-color: var(--color-primary);
 }
 
-.dev-icons {
+.dev-icons .list-inline-item button {
+  box-shadow: none !important;
+  margin-right: 1rem;
+}
+
+.dev-icons .list-inline-item {
+  box-shadow: none !important;
+  margin-right: 1rem;
+}
+
+.dev-icons .list-inline-item:last-child {
+  box-shadow: none !important;
+  margin-right: 0;
+}
+
+.dev-icons .list-inline-item button i {
   font-size: 3rem;
 }
 
-.dev-icons .list-inline-item i:hover {
+.dev-icons .list-inline-item button i:hover {
   color: var(--color-primary);
 }
 
@@ -64,7 +79,7 @@ p.lead {
 }
 
 #sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
+  outline-color: var(--color-tertiary);
 }
 
 @media (min-width: 992px) {
@@ -146,5 +161,5 @@ a {
 }
 
 a:hover, a:focus, a:active {
-  color: #824027;
+  color: var(--color-secondary);
 }
