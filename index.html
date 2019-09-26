@@ -1,178 +1,204 @@
 <!doctype html>
 <html lang="es">
-	<head>
-		<!-- META -->
-	    <meta charset="utf-8">
-	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-	    <!-- LINK -->
-        <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="assets/icons/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="assets/icons/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="assets/icons/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="assets/icons/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="assets/icons/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="assets/icons/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
-        <link rel="manifest" href="assets/icons/manifest.json">
-        <meta name="msapplication-TileColor" content="#343a40">
-        <meta name="msapplication-TileImage" content="assets/icons/ms-icon-144x144.png">
-        <meta name="theme-color" content="#343a40">
-
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/3f1c17c38d.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="assets/css/style.css">
 
-		<title>Cundalf</title>	
+        <title>Cundalf</title>
     </head>
-    
-    <body data-spy="scroll" data-target="#myNavbar">
-        <header>
-            <nav id="myNavbar" class="navbar navbar-dark bg-dark fixed-top navbar-expand-lg">
-                <a class="navbar-brand" href="#"><i class="fas fa-desktop"></i>&nbsp;Cundalf</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="nav nav-pills ml-auto">
-                        <li class="nav-item">
-                            <a class="nav-link active" href="#main">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projects">Proyectos</a>
-                        </li>
+    <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <span class="d-none d-lg-block">
+                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="">
+                </span>
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="navbar-collapse collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger active" href="#about">Informacion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#projects">Proyectos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#experience">Experiencia</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="container-fluid p-0">
         
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">Sobre mi</a>
-                        </li>
-                    </ul>
+            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+                <div class="w-100">
+                    <h1 class="mb-0">Agustín Uriel
+                        <span class="text-primary">Cundari</span>
+                    </h1>
+                    <h5 class="mb-5">Buenos Aires, Argentina · 11-2254-5613 ·
+                        <a href="mailto:name@email.com">acundari95@gmail.com</a>
+                    </h5>
+                    <p class="lead mb-5">Desarrollador fullstack con experiencia en VB 6.0 y PHP. GameDev en Unity. Autodidacta. </p>
+                    <div class="social-icons">
+                        <a href="#">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </div>
                 </div>
-            </nav>
-        </header>
-
-        <div class="container" id="main">
-            <main role="main">
+            </section>
+        
+            <hr class="m-0">
             
-                <div class="datos">
-                    <div class="profile"></div>
-                    <h2>Agustin Uriel Cundari</h2>
-                    <p>Programador & GameDev</p>
-
-                    <div class="row">
-                        <div class="rdContainer">
-                            <a href="https://github.com/Cundalf" target="_blank">
-                                <div class="rdIcon">
-                                    <i class="fab fa-github-square"></i>
-                                </div>
-                            </a>
+            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
+                <div class="w-100">
+                    <h2 class="mb-5">Proyectos</h2>
                     
-                            <a href="https://www.linkedin.com/in/cundalf/" target="_blank">
-                                <div class="rdIcon">
-                                    <i class="fab fa-linkedin"></i>
+                    <div class="card mb-4">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <div class="imgCard" style="background-image: url('assets/img/sllwebpage.jpg')"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Pagina web del Sanatorio Las Lomas</h5>
+                                    <p class="card-text">Desarrollado en Bootstrap 4, jQuery y Codeigniter (PHP).</p>
+                                    <p class="card-text"><small class="text-muted">Desarrollada a finales del 2018.</small></p>
                                 </div>
-                            </a>
-
-                            <a href="mailto:acundari95@gmail.com" target="_blank">
-                                <div class="rdIcon">
-                                    <i class="fas fa-envelope"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <div class="imgCard" style="background-image: url('assets/img/TankARpreview.png')"></div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">TankAR</h5>
+                                    <p class="card-text">
+                                        Mini juego de realidad aumentada en el que el jugador debe derribar objetivos por medio de un tanque. No tiene dependencias. 
+                                        Realizado en Vuforia 7, Unity 2018 y MagicaVoxel.
+                                    </p>
+                                    <p class="card-text"><small class="text-muted">Desarrollado en 2018.</small></p>
                                 </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <hr />
-                
-                <div id="projects">
-                    <div class="header">
-                        <h4>Proyectos</h4>
-                        <hr />
-                    </div>
-
-                    <div class="row project">
-                        <div class="col-md-7">
-                            <h2>TankAR. <span class="text-muted">Videojuego en AR.</span></h2>
-                            <p class="lead">Consiste en un juego para Android donde el jugador controla uno de los tanques de guerra disponibles. Podrá disfrutar de diversos minijuegos como lo son dispararle a objetivos, batallar contra otro tanque, Acertar disparos de artillería, etc. El jugador podrá desbloquear contenido extras gracias a las recompensas ganadas.</p>
-
-                            <p><i class="fab fa-youtube"></i> Pueden ver un prototipo <a href="https://www.youtube.com/watch?v=f8oWqwv2r3U" target="_blank">aquí</a>.</p>
-                            <p><i class="fab fa-github-square"></i> Pueden ver el repositorio <a href="https://github.com/Cundalf/tankAR" target="_blank">aquí</a>.</p>
-
-                            <span class="badge badge-pill badge-cundalf">Unity 2018</span>
-                            <span class="badge badge-pill badge-cundalf">Vuforia 7</span>
-                            <span class="badge badge-pill badge-cundalf">C#</span>
-                            <span class="badge badge-pill badge-cundalf">MagicaVoxel</span>
-                        </div>
-                        <div class="col-md-5">
-                            <div class="imgProjects" style="background-image: url('assets/img/TankARpreview.png');"></div>
-                        </div>
-                    </div>
-
-                    <hr />
-
-                    <div class="row project">
-                        <div class="col-md-7 order-md-2">
-                            <h2>PyCunda. <span class="text-muted">Utilidades multiproposito.</span></h2>
-                            <p class="lead">Conjunto de diversos scripts para facilitar esas tareas casuales molestas. ¿Porque hacerlo manual si lo puedes automatizar?</p>
-                            <p><i class="fab fa-github-square"></i> Pueden bajarlos de <a href="https://github.com/Cundalf/pyCunda" target="_blank">aquí</a>.</p>
-                            <span class="badge badge-pill badge-cundalf">Python</span>
-                        </div>
-                        <div class="col-md-5 order-md-1">
-                            <div class="imgProjects" style="background-image: url('assets/img/python.jpg');"></div>
-                        </div>
-                    </div>
-                </div>
-
-                <hr />
-                
-                <div id="about">
-                    <div class="about">
-                        <div class="header">
-                            <h4>Sobre Mí</h4>
-                            <hr />
-                        </div>
-
-                        <p class="lead text-justify">Programador fullstack con experiencia en Visual Basic 6.0 y PHP. Aficionado al desarrollo de videojuegos. Comprometido y Autodidacta.</p>
-                        
-                        <p><i class="fas fa-globe"></i> Pueden ver mis modelos en <a href="https://poly.google.com/user/8-z2BqwkZIq" target="_blank">mi perfil de Google Poly aquí</a>.</p>
-
-                        <div class="row text-center">
-                            <div class="col-lg-3">
-                                <a href="https://github.com/Cundalf" target="_blank"><i class="fab fa-github-square"></i> Cundalf </a> 
                             </div>
-                            <div class="col-lg-3">
-                                <a href="https://linkedin.com/in/Cundalf" target="_blank"><i class="fab fa-linkedin"></i> /in/Cundalf </a>
+                        </div>
+                    </div>
+                    
+                    <div class="card mb-4">
+                        <div class="row no-gutters">
+                            <div class="col-md-4">
+                                <div class="imgCard" style="background-image: url('assets/img/wifi.png')"></div>
                             </div>
-                            <div class="col-lg-3">
-                                <a href="mailto:acundari95@gmail.com" target="_blank"><i class="fas fa-envelope"></i> acundari95@gmail.com </a>
-                            </div>
-                            <div class="col-lg-3">
-                                <a href="assets/resources/CV_Agustin_Cundari.pdf" target="_blank"><i class="fas fa-file-alt"></i> Curriculum Vitae </a>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">Hogar Virtual</h5>
+                                    <p class="card-text">
+                                        Proyecto de Domotica que abarco el desarrollo tanto del hardware como el software desde cero.
+                                        La misma puede ser controlada desde cualquier PC o dispositivos Android por la internet, bluetooth y/o USB.
+                                        El desarrollo del software fue utilizando: Java, MPLabs (C++) y PHP.
+                                    </p>
+                                    <p class="card-text"><small class="text-muted">Desarrollado en 2015.</small></p>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <hr />
-            </main>        
-            
-            <footer id="footer">
-                <div class="row">
-                    <div class="col-sm-6 copyright">&copy; 2019 - Agustin U. Cundari</div>
-                    <div class="col-sm-6 back"><a href="#">Volver al inicio</a></div>
+            </section>
+        
+            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="experience">
+                <div class="w-100">
+                    <h2 class="mb-5">Experiencia</h2>
+        
+                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="resume-content">
+                            <h3 class="mb-0">Programador Fullstack</h3>
+                            <div class="subheading mb-3">Sanatorio Las Lomas S.A.</div>
+                            <p>
+                                Mantenimiento y desarrollo de aplicaciones en Visual Basic 6.0.
+                                Desarrollo full-stack en Codeigniter 3, Bootstrap 3 y 4, jQuery.
+                                Bases de datos utilizadas: MySQL e InterSystems Caché.
+                            </p>
+                        </div>
+                        <div class="resume-date text-md-right">
+                            <span class="text-primary">Febrero 2015 - Presente</span>
+                        </div>
+                    </div>
                 </div>
-            </footer>
+        
+            </section>
+        
+            <hr class="m-0">
+        
+            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+                <div class="w-100">
+                    <h2 class="mb-5">Educacion</h2>
+        
+                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="resume-content">
+                            <h3 class="mb-0">E.E.S.T. No3 “Roberto Arlt”</h3>
+                            <div class="subheading mb-3">Técnico en informática personal y profesional</div>
+                            <div>Análisis y desarrollo de sistemas. Diseño web y multimedia. Electrónica básica.</div>
+                        </div>
+                        <div class="resume-date text-md-right">
+                            <span class="text-primary">August 2006 - May 2010</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <hr class="m-0">
+        
+            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+                <div class="w-100">
+                    <h2 class="mb-5">Skills</h2>
+        
+                    <div class="subheading mb-3">Lenguajes de Programacion y Frameworks:</div>
+                    <p>Angular &#183; C# &#183; Codeigniter &#183; Javascript &#183; jQuery &#183; PHP &#183; Python &#183; Visual Basic </p>
+                    
+                    <div class="subheading mb-3">Web:</div>
+                    <p>Bootstrap 4 &#183; CSS3 &#183; HTML5 </p>
+                    
+                    <div class="subheading mb-3">Videojuegos:</div>
+                    <p>Unity &#183; Vuforia &#183; MagicaVoxel </p>
+                    
+                    <div class="subheading mb-3">DB:</div>
+                    <p>MySQL &#183; SQLite </p>
+                </div>
+            </section>
+        
         </div>
-    
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
-    </body>
-</html>
 
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"></script>
+    </body>
+
+</html>
