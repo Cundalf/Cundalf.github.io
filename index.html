@@ -1,11 +1,12 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE HTML>
+<html>
 
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         
+        <!-- favicon -->
         <link rel="apple-touch-icon" sizes="57x57" href="assets/icons/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="assets/icons/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="assets/icons/apple-icon-72x72.png">
@@ -20,243 +21,67 @@
         <link rel="icon" type="image/png" sizes="96x96" href="assets/icons/favicon-96x96.png">
         <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
         <link rel="manifest" href="assets/icons/manifest.json">
+        <!-- /favicon -->
+        
         <meta name="msapplication-TileColor" content="#0C2A7D">
         <meta name="msapplication-TileImage" content="assets/icons/ms-icon-144x144.png">
         <meta name="theme-color" content="#0C2A7D">
         
         <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-
-        <title>Cundalf</title>
+        <link rel="stylesheet" href="assets/css/animate.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        
+        <title>Agustin Cundari</title>
     </head>
 
-    <body id="page-top" data-spy="scroll" data-target=".navbar" data-offset="50">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-            <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Agustín Cundari</span>
-                <span class="d-none d-lg-block">
-                    <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="">
-                </span>
-            </a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger active" href="#about">Informacion</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#projects">Proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#experience">Experiencia</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <body>
+        <div class="container h-100 animated fadeIn">
+            <div class="row align-items-center text-center h-100">
+                <div id="main-card" class="card mx-auto col-lg-5 col-md-7 col-sm-9">
+                    <section class="avatar">
+                        <img class="img-fluid img-profile rounded-circle" src="assets/img/profile.jpg">
+                    </section>
+                    
+                    <section id="name" class="mb-2">
+                        <h2>Agustin Cundari</h2>
+                        <h3 class="text-muted">Developer</h3>
+                    </section>
+                    
+                    <section id="skills" class="mb-4">
+                        <span class="badge badge-dark animated fadeIn slower">Unity</span>
+                        <span class="badge badge-primary animated fadeIn slower">PHP - Codeigniter</span>
+                        <span class="badge badge-bootstrap animated fadeIn slower">Bootstrap</span>
+                        <span class="badge badge-warning animated fadeIn slower">jQuery</span>
+                        <span class="badge badge-secondary animated fadeIn slower">Visual Basic</span>
+                        <span class="badge badge-primary animated fadeIn slower">MySQL</span>
+                        <span class="badge badge-info animated fadeIn slower">Intersystem Cache</span>
+                        <span class="badge badge-danger animated fadeIn slower">Angular</span>
+                    </section>
 
-        <div class="container-fluid p-0">
-        
-            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-                <div class="w-100">
-                    <h1 class="mb-0">Agustín Uriel
-                        <span class="text-primary">Cundari</span>
-                    </h1>
-                    <h5 class="mb-5">Buenos Aires, Argentina · 11-2254-5613 ·
-                        <a href="mailto:acundari95@gmail.com" target="_blank">acundari95@gmail.com</a>
-                    </h5>
-                    <p class="lead mb-5">Desarrollador fullstack con experiencia en VB 6.0 y PHP. GameDev en Unity. Autodidacta. </p>
-                    <div class="social-icons">
-                        <a href="https://www.linkedin.com/in/cundalf/" target="_blank">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/Cundalf/" target="_blank">
+                    <section id="options">
+                        <a href="https://github.com/Cundalf" role="button" class="btn btn-lg btn-outline-primary rounded-circle">
                             <i class="fab fa-github"></i>
                         </a>
-                    </div>
+                        
+                        <a href="https://www.linkedin.com/in/cundalf/" role="button" class="btn btn-lg btn-outline-primary rounded-circle">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        
+                        <a href="mailto:acundari95@gmail.com" role="button" class="btn btn-lg btn-outline-primary rounded-circle">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        
+                    </section>
                 </div>
-            </section>
-        
-            <hr class="m-0">
+            </div>
             
-            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="projects">
-                <div class="w-100">
-                    <h2 class="mb-5">Proyectos</h2>
-                    
-                    <div class="card mb-4">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <div class="imgCard" style="background-image: url('assets/img/sllwebpage.jpg')"></div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Pagina web del Sanatorio Las Lomas</h5>
-                                    <p class="card-text">Desarrollado en Bootstrap 4, jQuery y Codeigniter (PHP).</p>
-                                    <p class="card-text"><small class="text-muted">Desarrollada a finales del 2018.</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="card mb-4">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <div class="imgCard" style="background-image: url('assets/img/TankARpreview.png')"></div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">TankAR</h5>
-                                    <p class="card-text">
-                                        Mini juego de realidad aumentada en el que el jugador debe derribar objetivos por medio de un tanque. No tiene dependencias. 
-                                        Realizado en Vuforia 7, Unity 2018 y MagicaVoxel.
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">Desarrollado en 2018.</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="card mb-4">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <div class="imgCard" style="background-image: url('assets/img/wifi.png')"></div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">Hogar Virtual</h5>
-                                    <p class="card-text">
-                                        Proyecto de Domotica que abarco el desarrollo tanto del hardware como el software desde cero.
-                                        La misma puede ser controlada desde cualquier PC o dispositivos Android por la internet, bluetooth y/o USB.
-                                        El desarrollo del software fue utilizando: Java, MPLabs (C++) y PHP.
-                                    </p>
-                                    <p class="card-text"><small class="text-muted">Desarrollado en 2015.</small></p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <hr class="m-0">
-        
-            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="experience">
-                <div class="w-100">
-                    <h2 class="mb-5">Experiencia</h2>
-        
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="resume-content">
-                            <h3 class="mb-1">Programador Fullstack</h3>
-                            <div class="subheading mb-3">Sanatorio Las Lomas S.A.</div>
-                            <p>
-                                Mantenimiento y desarrollo de aplicaciones en Visual Basic 6.0.
-                                Desarrollo full-stack en Codeigniter 3, Bootstrap 3 y 4, jQuery.
-                                Bases de datos utilizadas: MySQL e InterSystems Caché.
-                            </p>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">Febrero 2015 - Presente</span>
-                        </div>
-                    </div>
-                </div>
-        
-            </section>
-        
-            <hr class="m-0">
-        
-            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-                <div class="w-100">
-                    <h2 class="mb-5">Educación</h2>
-        
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="resume-content">
-                            <h3 class="mb-1">E.E.S.T. N3 “Roberto Arlt”</h3>
-                            <div class="subheading mb-3">Técnico en informática personal y profesional</div>
-                            <div>Análisis y desarrollo de sistemas. Diseño web y multimedia. Electrónica básica.</div>
-                        </div>
-                        <div class="resume-date text-md-right">
-                            <span class="text-primary">2015</span>
-                        </div>
-                    </div>
-                    
-                    <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                        <div class="resume-content">
-                            <h3 class="mb-1">Udemy</h3>
-                            <ul>
-                                <li>Master en Programación de Videojuegos con Unity® 2018 y C# <a href="https://www.udemy.com/certificate/UC-B9X0PDVY/" target="_blank">(UC-B9X0PDVY)</a></li>
-                                <li>Máster Realidad Aumentada con Unity 3D, Vuforia y C# <a href="https://www.udemy.com/certificate/UC-L9GXS104/" target="_blank">(UC-L9GXS104)</a></li>
-                                <li>MagicaVoxel y Unity 3D - Modelado y Diseño para videojuegos <a href="https://www.udemy.com/certificate/UC-ENIAO1DZ/" target="_blank">(UC-ENIAO1DZ)</a></li>
-                                <li>SQLite, Unity® 3D, C# y Bases de datos para Videojuegos <a href="https://www.udemy.com/certificate/UC-WSQYGY54/" target="_blank">(UC-WSQYGY54)</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        
-            <hr class="m-0">
-        
-            <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-                <div class="w-100">
-                    <h2 class="mb-5">Skills</h2>
-                    
-                    <ul class="list-inline dev-icons mb-5">
-                        <li class="list-inline-item">
-                            <button type="button" class="btn p-0" data-toggle="popover" data-container="body" data-trigger="focus" data-placement="top" title="CSS 3" data-content="Dominio de CSS 3.">
-                                <i class="fab fa-css3-alt"></i>
-                            </button>
-                        </li>
-                        <li class="list-inline-item">
-                            <button type="button" class="btn p-0" data-toggle="popover" data-trigger="focus" data-placement="top" title="Javascript" data-content="Nivel avanzado de Javascript y jQuery.">
-                                <i class="fab fa-js-square"></i>
-                            </button>
-                        </li>
-                        <li class="list-inline-item">
-                            <button type="button" class="btn p-0" data-toggle="popover" data-trigger="focus" data-placement="top" title="Angular 2" data-content="Uso de Angular 2+. Ionic 2+.">
-                                <i class="fab fa-angular"></i>
-                            </button>
-                        </li>
-                        <li class="list-inline-item">
-                            <button type="button" class="btn p-0" data-toggle="popover" data-trigger="focus" data-placement="top" title="PHP" data-content="Nivel avanzado en PHP 5 y 7. Framework: Codeigniter 3.">
-                                <i class="fab fa-php"></i>
-                            </button>
-                        </li>
-                        <li class="list-inline-item">
-                            <button type="button" class="btn p-0" data-toggle="popover" data-trigger="focus" data-placement="top" title="CSS 3" data-content="Dominio de CSS 3.">
-                                <i class="fab fa-bootstrap"></i>
-                            </button>
-                        </li>
-                        <li class="list-inline-item">
-                            <button type="button" class="btn p-0" data-toggle="popover" data-trigger="focus" data-placement="top" title="Python" data-content="Uso de Python para scripting. Nociones basicas de Django.">
-                                <i class="fab fa-python"></i>
-                            </button>
-                        </li>
-                    </ul>
-        
-                    <h5>Lenguajes de Programacion y Frameworks:</h5>
-                    <p>Angular &#183; C# &#183; Codeigniter &#183; Javascript &#183; jQuery &#183; PHP &#183; Python &#183; Visual Basic </p>
-                    
-                    <h5>Web:</h5>
-                    <p>Bootstrap 4 &#183; CSS &#183; HTML5 </p>
-                    
-                    <h5>Videojuegos:</h5>
-                    <p>Unity &#183; Vuforia &#183; MagicaVoxel </p>
-                    
-                    <h5>DB:</h5>
-                    <p>MySQL &#183; SQLite </p>
-                </div>
-            </section>
+            <div class="row align-items-center text-center h-100">
+                <i class="text-muted">&copy; Cundalf</i>
+            </div>
         </div>
-
+        
         <script src="assets/js/jquery-3.4.1.min.js"></script>
         <script src="assets/bootstrap/js/bootstrap.bundle.min.js"></script>
-        <script src="assets/js/scripts.js"></script>
     </body>
 </html>
