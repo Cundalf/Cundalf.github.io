@@ -1,0 +1,37 @@
+<ng-template #frikiBombModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Friki Bomb</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <img class="img-fluid rounded mb-5" src="assets/images/portfolio/FrikiBomb.jpg" alt="" />
+                    <p class="mb-5 font-italic">
+                        En FrikiBomb tienes que sacar tu concentración que has
+                        ganado de tanto jugar como todo un friki orgulloso y usar
+                        tus conocimientos sobre videojuegos para desactivar una
+                        bomba. No tienes tiempo que perder, esta por explotar y solo
+                        queda desactivarla para que podamos volver a nuestra cueva
+                        friki.
+                    </p>
+                    <p class="mb-5">
+                        Videojuego desarrollado para la GameJam
+                        <strong>// TODO Game Jam #2</strong> con la consigna "No hay
+                        tiempo que perder". El mismo finalizo en el puesto 6 de 33.
+                    </p>
+                    <p class="mb-5">
+                        Desarrollado en Unity 2019, Modelado en MagicaVoxel y
+                        Optimizado gracias al plugin MagicaVoxel To Unity.
+                    </p>
+
+                    <a class="btn btn-outline-danger btn-social mx-1" href="https://cundalf.itch.io/frikibomb"
+                        target="_blank"><i class="fab fa-itch-io"></i></a>
+                    <a class="btn btn-outline-dark btn-social mx-1" href="https://github.com/Cundalf/FrikiBomb"
+                        target="_blank"><i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

@@ -1,0 +1,30 @@
+<header class="masthead parallax text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="assets/images/avatar.png" alt="" />
+        
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">{{name}}</h1>
+        
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <fa-icon [icon]="faCodeIcon"></fa-icon>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+        
+        <!-- Masthead Subheading-->
+        <p class="masthead-subheading font-weight-light mb-0">{{profession}}</p>
+
+        <div class="col align-self-center">
+            <h4 class="text-uppercase mb-4"></h4>
+            
+            <app-social-button [url]="linkedInProfileUrl" [icon]="faLinkedInIcon"></app-social-button>
+            <app-social-button [url]="githubProfileUrl" [icon]="faGithubIcon"></app-social-button>
+            <app-social-button [url]="mailToUrl" [icon]="faEnvelopeIcon"></app-social-button>
+            <app-social-button [url]="itchIoProfileUrl" [icon]="faItchIo"></app-social-button>
+        </div>
+    </div>
+</header>

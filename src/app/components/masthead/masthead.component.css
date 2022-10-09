@@ -1,0 +1,24 @@
+.masthead {
+  display: table-cell;
+  width: 100vw;
+  height: 100vh;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.masthead .container {
+  display: inline-block;
+}
+
+.masthead .masthead-avatar {
+  width: 15rem;
+}
+
+.masthead .masthead-subheading {
+  font-size: 1.25rem;
+}
+
+.masthead .masthead-heading {
+  font-size: 2.75rem;
+  line-height: 2.75rem;
+}

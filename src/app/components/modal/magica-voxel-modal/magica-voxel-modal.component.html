@@ -1,0 +1,66 @@
+<ng-template #magicaVoxelModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Magica Voxel</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <img class="img-fluid rounded mb-5" src="assets/images/portfolio/CrossyVoxel.jpg" />
+
+                    <p class="mb-5 text-italic">
+                        <a href="https://ephtracy.github.io/" target="_blank">MagicaVoxel</a> es un editor
+                        de Voxel Art gratuito desarrollado por Ephtracy.
+                    </p>
+
+                    <p class="mb-5">
+                        En diversos proyecto se podra visualizar el trabajo que realizo en este editor, el
+                        cual recomiendo totalmente. El primer modelo que realice fue un escenario basado en
+                        el videojuegos Crossy Road gracias a Mariano Rivas.
+                    </p>
+
+                    <div id="carouselVoxel" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselVoxel" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselVoxel" data-slide-to="1"></li>
+                            <li data-target="#carouselVoxel" data-slide-to="2"></li>
+                            <li data-target="#carouselVoxel" data-slide-to="3"></li>
+                            <li data-target="#carouselVoxel" data-slide-to="4"></li>
+                            <li data-target="#carouselVoxel" data-slide-to="5"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img src="assets/images/vox/1.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/vox/2.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/vox/3.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/vox/4.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/vox/5.jpg" class="d-block w-100">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="assets/images/vox/6.jpg" class="d-block w-100">
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselVoxel" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Anterior</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselVoxel" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Siguiente</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>
