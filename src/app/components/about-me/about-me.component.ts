@@ -8,6 +8,7 @@ import { faCode, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 })
 export class AboutMeComponent implements OnInit {
 	faCodeIcon: IconDefinition = faCode;
+	
 	constructor() { }
 
 	ngOnInit(): void {

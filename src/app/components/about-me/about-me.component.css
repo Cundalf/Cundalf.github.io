@@ -1,0 +1,84 @@
+.lead {
+    font-size: 1.5rem;
+}
+
+.vb-color {
+    background-color: #004E8C!important;
+}
+
+.php-color {
+    background-color: #787CB4!important;
+}
+
+.codeigniter-color {
+    background-color: #EE4323!important;
+}
+
+.bootstrap-color {
+    background-color: #7F0AF9!important;
+}
+
+.javascript-color {
+    background-color: #F0DB4F!important;
+}
+
+.typescript-color {
+    background-color: #2D79C7!important;
+}
+
+.node-color {
+    background-color: #5AAA46!important;
+}
+
+.csharp-color {
+    background-color: #390091!important;
+}
+
+.java-color {
+    background-color: #4E7896!important;
+}
+
+.spring-color {
+    background-color: #77BC1F!important;
+}
+
+.docker-color {
+    background-color: #2497ED!important;
+}
+
+.angular-color {
+    background-color: #C4002B!important;
+}
+
+.junit-color {
+    background-color: #25A162!important;
+}
+
+.mysql-color {
+    background-color: #CF8B2B!important;
+}
+
+.mongodb-color {
+    background-color: #09934E!important;
+}
+
+.cache-color {
+    background-color: #2E2A94!important;
+}
+
+.genexus-color {
+    background-color: #5B80F5!important;
+}
+
+.skills {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.skills .badge {
+    margin: 10px;
+    text-shadow: none;
+    font-size: 1.1rem;
+}

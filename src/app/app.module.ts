@@ -11,7 +11,6 @@ import { SocialButtonComponent } from './components/social-button/social-button.
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { PortfolioItemComponent } from './components/portfolio/portfolio-item/portfolio-item.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
-import { SkillsComponent } from './components/skills/skills.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { RabbitKillerModalComponent } from './components/modal/rabbit-killer-modal/rabbit-killer-modal.component';
 import { StalhvikModalComponent } from './components/modal/stalhvik-modal/stalhvik-modal.component';
@@ -22,6 +21,8 @@ import { TankArModalComponent } from './components/modal/tank-ar-modal/tank-ar-m
 import { UnrealEngineModalComponent } from './components/modal/unreal-engine-modal/unreal-engine-modal.component';
 import { FastFuriousModalComponent } from './components/modal/fast-furious-modal/fast-furious-modal.component';
 import { MagicaVoxelModalComponent } from './components/modal/magica-voxel-modal/magica-voxel-modal.component';
+import { CertificationsComponent } from './components/certifications/certifications.component';
+import { CertviewerComponent } from './components/modal/certviewer/certviewer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,6 @@ import { MagicaVoxelModalComponent } from './components/modal/magica-voxel-modal
     PortfolioComponent,
     PortfolioItemComponent,
     AboutMeComponent,
-    SkillsComponent,
     FooterComponent,
     RabbitKillerModalComponent,
     StalhvikModalComponent,
@@ -42,7 +42,9 @@ import { MagicaVoxelModalComponent } from './components/modal/magica-voxel-modal
     TankArModalComponent,
     UnrealEngineModalComponent,
     FastFuriousModalComponent,
-    MagicaVoxelModalComponent
+    MagicaVoxelModalComponent,
+    CertificationsComponent,
+    CertviewerComponent
   ],
   imports: [
     BrowserModule,
