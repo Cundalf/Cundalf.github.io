@@ -1,4 +1,6 @@
 import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+import { faGithub, faItchIo } from '@fortawesome/free-brands-svg-icons';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject } from 'rxjs';
 
@@ -8,6 +10,9 @@ import { Subject } from 'rxjs';
 	styleUrls: ['./friki-bomb-modal.component.css']
 })
 export class FrikiBombModalComponent implements OnInit {
+
+	faGithubIcon: IconDefinition = faGithub;
+	faItchIcon: IconDefinition = faItchIo;
 
 	@Input()
 	openModal: Subject<void> = new Subject();

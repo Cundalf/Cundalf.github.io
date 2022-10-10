@@ -37,13 +37,6 @@ export class PortfolioComponent implements OnInit {
 		));
 
 		this.portfolio.push(new Portfolio(
-			'Palatinus',
-			'assets/images/portfolio/Palatinus.jpg',
-			'palatinusModal',
-			PortfolioType.GAMEDEV
-		));
-
-		this.portfolio.push(new Portfolio(
 			'Rabbit Killer',
 			'assets/images/portfolio/RabbitKiller.jpg',
 			'rabbitKillerModal',
@@ -54,6 +47,13 @@ export class PortfolioComponent implements OnInit {
 			'Friki Bomb',
 			'assets/images/portfolio/FrikiBomb.jpg',
 			'frikiBombModal',
+			PortfolioType.GAMEDEV
+		));
+
+		this.portfolio.push(new Portfolio(
+			'Palatinus',
+			'assets/images/portfolio/Palatinus.jpg',
+			'palatinusModal',
 			PortfolioType.GAMEDEV
 		));
 
@@ -94,7 +94,7 @@ export class PortfolioComponent implements OnInit {
 	}
 
 	openModal(modalReference: string) {
-		switch(modalReference) {
+		switch (modalReference) {
 			case 'rabbitKillerModal':
 				this.openKillerRabbitModal.next();
 				break;
