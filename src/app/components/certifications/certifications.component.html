@@ -1,0 +1,103 @@
+<section class="page-section portfolio">
+    <div class="container">
+
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+            Certificaciones
+        </h2>
+
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon">
+                <fa-icon [icon]="faCodeIcon"></fa-icon>
+            </div>
+            <div class="divider-custom-line"></div>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th scope="col">Año</th>
+                        <th scope="col">Certificacion</th>
+                        <th scope="col">Cert.</th>
+                        <th scope="col">Instituto</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>2020</td>
+                        <td>Node: De cero a experto</td>
+                        <td class="no-wrap">Udemy</td>
+                        <td>
+                            <a href="https://www.udemy.com/certificate/UC-56c11627-039c-4041-8df5-f3b4c0ec23d6/">
+                                <fa-icon [icon]="faSearchIcon"></fa-icon>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Analista Junior GeneXus 17</td>
+                        <td class="no-wrap">Genexus</td>
+                        <td>
+                            <a href="https://training.genexus.com/es/">
+                                <fa-icon [icon]="faGlobeIcon"></fa-icon>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Diplomatura en desarrollo de videojuegos con Unity</td>
+                        <td class="no-wrap">U.T.N. F.R.B.A.</td>
+                        <td>
+                            <a href="" (click)="openUtnUnityCert($event)">
+                                <fa-icon [icon]="faSearchIcon"></fa-icon>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2021</td>
+                        <td>Professional Full-Stack Developer</td>
+                        <td class="no-wrap">U.T.N. F.R.B.A. E.L.</td>
+                        <td>
+                            <a href="" (click)="openUtnFullStackCert($event)">
+
+                                <fa-icon [icon]="faSearchIcon"></fa-icon>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Desarrollo de videojuegos con Cocos Creator</td>
+                        <td class="no-wrap">U.T.N. F.R.B.A.</td>
+                        <td>
+                            <a href="" (click)="openUtnCocosCert($event)">
+                                <fa-icon [icon]="faSearchIcon"></fa-icon>
+                            </a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2022</td>
+                        <td>Diplomatura en Java</td>
+                        <td class="no-wrap">U.T.N. F.R.B.A. E.L.</td>
+                        <td>
+                            <a href="" (click)="openUtnJavaCert($event)">
+                                <fa-icon [icon]="faSearchIcon"></fa-icon>
+                            </a>
+                        </td>
+                    </tr>
+
+                    <tr class="table-dark text-center">
+                        <td colspan="4"><i class="cert-info">Solo se listan las ultimas certificaciones mas relevantes.
+                                Informacion completa en <a href="https://www.linkedin.com/in/cundalf/">LinkedIn</a>.</i>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<app-certviewer [openModal]="openCertViewer">
+</app-certviewer>

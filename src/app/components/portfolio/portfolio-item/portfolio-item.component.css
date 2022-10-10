@@ -1,0 +1,28 @@
+.portfolio-item {
+  cursor: pointer;
+  position: relative;
+  display: block;
+  max-width: 25rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+
+.portfolio-item .portfolio-item-caption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.2s ease-in-out;
+  opacity: 0;
+  background-color: rgb(142, 212, 207, 0.9);
+}
+
+.portfolio-item .portfolio-item-caption:hover {
+  opacity: 1;
+}
+
+.portfolio-item
+  .portfolio-item-caption
+  .portfolio-item-caption-content {
+  padding-top: 10px;
+  font-size: 5rem;
+}

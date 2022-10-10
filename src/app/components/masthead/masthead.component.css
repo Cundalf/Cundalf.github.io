@@ -1,0 +1,31 @@
+.masthead {
+  display: table-cell;
+  width: 100vw;
+  height: 100vh;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.masthead .container {
+  display: inline-block;
+}
+
+.masthead .masthead-avatar {
+  width: 15rem;
+  height: 15rem;
+  background-image: url('/assets/images/avatar.png');
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.5);
+  background-repeat: no-repeat;
+  background-size: 15rem;
+  background-position: center;
+}
+
+.masthead .masthead-subheading {
+  font-size: 1.5rem;
+}
+
+.masthead .masthead-heading {
+  font-size: 2.75rem;
+  line-height: 2.75rem;
+}

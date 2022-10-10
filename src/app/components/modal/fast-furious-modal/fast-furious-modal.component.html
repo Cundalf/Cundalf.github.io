@@ -1,0 +1,37 @@
+<ng-template #fastFuriousModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Friki Bomb</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+
+                    <img class="img-fluid rounded mb-5" src="assets/images/portfolio/FastFurious.jpg" alt="" />
+
+                    <p class="mb-5 text-italic">
+                        Ir a toda velocidad puede ser algo divertido, pero... ¿Que tan lejos puedes llegar?
+                        ¡Cuidado con lo que chocas!
+                    </p>
+
+                    <p class="mb-5">
+                        2 Fast 2 Furious fue mi primer videojuego creado en MagicaVoxel en Unity a finales
+                        del 2017. Agradezco todos los conocimientos adquiridos a Mariano Rivas.
+                    </p>
+
+                    <div class="text-center">
+                        <a class="btn btn-outline-danger btn-social mx-1" href="https://youtu.be/M3QriY_uqTY"
+                            target="_blank">
+                            <fa-icon [icon]="faYoutubeIcon"></fa-icon>
+                        </a>
+                        <a class="btn btn-outline-dark btn-social mx-1" href="https://github.com/Cundalf/2Fast2Furious"
+                            target="_blank">
+                            <fa-icon [icon]="faGithubIcon"></fa-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

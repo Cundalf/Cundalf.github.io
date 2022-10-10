@@ -1,0 +1,36 @@
+<ng-template #palatinusModal let-modal>
+    <div class="modal-header">
+        <h4 class="modal-title" id="modal-basic-title">Friki Bomb</h4>
+        <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+    </div>
+    <div class="modal-body">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <img class="img-fluid rounded mb-5" src="assets/images/portfolio/Palatinus.jpg" alt="" />
+
+                    <p class="mb-5">
+                        Palatinus es un videojuego de accion desarrollado como trabajo final para el curso de
+                        videojuegos de la UTN FRRE (en su plataforma Elearning Total).
+                    </p>
+
+                    <p class="mb-5">
+                        Se utilizo para el desarrollo: Unity 2019 y Mixamo. Todos lo assets utilizados en este
+                        videojuegos se encuentran disponibles en la Unity Assets Store.
+                    </p>
+
+                    <div class="text-center">
+                        <a class="btn btn-outline-danger btn-social mx-1" href="https://cundalf.itch.io/palatinus"
+                            target="_blank">
+                            <fa-icon [icon]="faItchIcon"></fa-icon>
+                        </a>
+                        <a class="btn btn-outline-dark btn-social mx-1" href="https://github.com/Cundalf/Palatinus"
+                            target="_blank">
+                            <fa-icon [icon]="faGithubIcon"></fa-icon>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-template>

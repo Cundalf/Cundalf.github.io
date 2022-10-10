@@ -1,0 +1,35 @@
+<section class="page-section portfolio" id="proyectos">
+    <div class="container">
+        
+        <!-- Portfolio Section Heading-->
+        <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">
+            Portfolio
+        </h2>
+        
+        <!-- Icon Divider-->
+        <div class="divider-custom">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><fa-icon [icon]="faCodeIcon"></fa-icon></div>
+            <div class="divider-custom-line"></div>
+        </div>
+        
+        <!-- Portfolio Grid Items-->
+        <div class="portfolio-items">
+            <ng-container *ngFor="let portfolioItem of portfolio">
+                <app-portfolio-item class='portfolio-item-flex mb-5' 
+                [imagePath]="portfolioItem.imagePath"
+                (openInformationEvent)="openModal(portfolioItem.modalReference)"></app-portfolio-item>
+            </ng-container>
+        </div>
+    </div>
+</section>
+
+<app-rabbit-killer-modal [openModal]="openKillerRabbitModal"></app-rabbit-killer-modal>
+<app-fast-furious-modal [openModal]="openfastFuriousModal"></app-fast-furious-modal>
+<app-friki-bomb-modal [openModal]="openFrikiBombModal"></app-friki-bomb-modal>
+<app-stalhvik-modal [openModal]="openStalhvikModal"></app-stalhvik-modal>
+<app-loe-modal [openModal]="openLoeModal"></app-loe-modal>
+<app-magica-voxel-modal [openModal]="openMagicaVoxelModal"></app-magica-voxel-modal>
+<app-palatinus-modal [openModal]="openPalatinusModal"></app-palatinus-modal>
+<app-tank-ar-modal [openModal]="openTankArModal"></app-tank-ar-modal>
+<app-unreal-engine-modal [openModal]="openUnrealEngineModal"></app-unreal-engine-modal>

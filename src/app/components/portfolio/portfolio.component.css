@@ -1,0 +1,23 @@
+.portfolio-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-items > .portfolio-item-flex {
+    padding: 0 1rem 0 1rem;
+    flex: 1 1 30%; /*grow | shrink | basis */
+}
+
+@media (max-width: 992px) {
+    .portfolio-items > .portfolio-item-flex {
+        flex: 1 1 50%;
+    }
+}
+
+@media (max-width: 768px) { 
+    .portfolio-items {
+        flex-direction: column;
+    }
+}
