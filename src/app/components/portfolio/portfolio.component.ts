@@ -11,6 +11,8 @@ import { Portfolio, PortfolioType } from 'src/app/models/portfolio';
 export class PortfolioComponent implements OnInit {
 	faCodeIcon: IconDefinition = faCode;
 	portfolio: Portfolio[] = [];
+	portfolioPrincipal: Portfolio[] = [];
+	portfolioSecundario: Portfolio[] = [];
 	openKillerRabbitModal: Subject<void> = new Subject();
 	openfastFuriousModal: Subject<void> = new Subject();
 	openFrikiBombModal: Subject<void> = new Subject();
@@ -20,15 +22,28 @@ export class PortfolioComponent implements OnInit {
 	openStalhvikModal: Subject<void> = new Subject();
 	openTankArModal: Subject<void> = new Subject();
 	openUnrealEngineModal: Subject<void> = new Subject();
+	openModularDroneXModal: Subject<void> = new Subject();
+	openCoquitoModal: Subject<void> = new Subject();
+
+	verMasPortfolio: boolean = false;
 
 	constructor() {
 		this.createPortfolioItems();
+		this.portfolioPrincipal = this.portfolio.slice(0, 6);
+		this.portfolioSecundario = this.portfolio.slice(6, this.portfolio.length);
 	}
 
 	ngOnInit(): void {
 	}
 
 	private createPortfolioItems(): void {
+		this.portfolio.push(new Portfolio(
+			'ModularDroneX',
+			'assets/images/portfolio/modulardronex.jpg',
+			'modulardronexModal',
+			PortfolioType.GAMEDEV
+		));
+
 		this.portfolio.push(new Portfolio(
 			'Stalhvik',
 			'assets/images/portfolio/Stalhvik.jpg',
@@ -51,9 +66,9 @@ export class PortfolioComponent implements OnInit {
 		));
 
 		this.portfolio.push(new Portfolio(
-			'Palatinus',
-			'assets/images/portfolio/Palatinus.jpg',
-			'palatinusModal',
+			'Coquito',
+			'assets/images/portfolio/cocos.jpg',
+			'coquitoModal',
 			PortfolioType.GAMEDEV
 		));
 
@@ -61,6 +76,13 @@ export class PortfolioComponent implements OnInit {
 			'LoE',
 			'assets/images/portfolio/LogoLoE.jpg',
 			'loeModal',
+			PortfolioType.GAMEDEV
+		));
+
+		this.portfolio.push(new Portfolio(
+			'Palatinus',
+			'assets/images/portfolio/Palatinus.jpg',
+			'palatinusModal',
 			PortfolioType.GAMEDEV
 		));
 
@@ -122,6 +144,17 @@ export class PortfolioComponent implements OnInit {
 			case 'unrealEngineModal':
 				this.openUnrealEngineModal.next();
 				break;
+			case 'modulardronexModal':
+				this.openModularDroneXModal.next();
+				break;
+			case 'coquitoModal':
+				this.openCoquitoModal.next();
+				break;
 		}
+	}
+
+	abrirMasPortfolio($event: MouseEvent) {
+		$event.preventDefault();
+		this.verMasPortfolio = true;
 	}
 }

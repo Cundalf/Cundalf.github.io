@@ -23,6 +23,9 @@ import { FastFuriousModalComponent } from './components/modal/fast-furious-modal
 import { MagicaVoxelModalComponent } from './components/modal/magica-voxel-modal/magica-voxel-modal.component';
 import { CertificationsComponent } from './components/certifications/certifications.component';
 import { CertviewerComponent } from './components/modal/certviewer/certviewer.component';
+import { ExperienciasComponent } from './components/experiencias/experiencias.component';
+import { ModularDroneXModalComponent } from './components/modal/modular-drone-x-modal/modular-drone-x-modal.component';
+import { CoquitoModalComponent } from './components/modal/coquito-modal/coquito-modal.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +47,10 @@ import { CertviewerComponent } from './components/modal/certviewer/certviewer.co
     FastFuriousModalComponent,
     MagicaVoxelModalComponent,
     CertificationsComponent,
-    CertviewerComponent
+    CertviewerComponent,
+    ExperienciasComponent,
+    ModularDroneXModalComponent,
+    CoquitoModalComponent
   ],
   imports: [
     BrowserModule,

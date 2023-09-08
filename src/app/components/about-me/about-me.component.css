@@ -14,6 +14,10 @@
     background-color: #EE4323!important;
 }
 
+.cypress-color {
+	background-color: #0a3429!important;
+}
+
 .bootstrap-color {
     background-color: #7F0AF9!important;
 }
@@ -22,12 +26,20 @@
     background-color: #F0DB4F!important;
 }
 
+.unity-color, .unreal-color {
+	background-color: black!important;
+}
+
 .typescript-color {
     background-color: #2D79C7!important;
 }
 
 .node-color {
     background-color: #5AAA46!important;
+}
+
+.cplusplus-color {
+	background-color: #659bd3!important;
 }
 
 .csharp-color {
@@ -81,4 +93,13 @@
     margin: 10px;
     text-shadow: none;
     font-size: 1.1rem;
+}
+
+.ver-mas {
+	font-size: 1.3rem;
+	cursor: pointer;
+}
+
+.ver-mas:hover {
+	color: var(--primary-color);
 }

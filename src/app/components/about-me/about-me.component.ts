@@ -8,10 +8,14 @@ import { faCode, IconDefinition } from '@fortawesome/free-solid-svg-icons';
 })
 export class AboutMeComponent implements OnInit {
 	faCodeIcon: IconDefinition = faCode;
-	
+	mostrarMasSkills: boolean = false;
+
 	constructor() { }
 
 	ngOnInit(): void {
 	}
 
+	verMasSkills(): void {
+		this.mostrarMasSkills = true;
+	}
 }

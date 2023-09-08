@@ -19,15 +19,50 @@
             <table class="table table-striped table-hover">
                 <thead>
                     <tr>
-                        <th scope="col">Año</th>
                         <th scope="col">Certificacion</th>
                         <th scope="col">Instituto</th>
                         <th scope="col">Cert.</th>
                     </tr>
                 </thead>
                 <tbody>
+					<tr>
+						<td>Certified Scrum Developer® (CSD®)</td>
+						<td class="no-wrap">Scrum Alliance</td>
+						<td>
+							<a href="https://bcert.me/bc/html/show-badge.html?b=dtmwlssw">
+								<fa-icon [icon]="faGlobeIcon"></fa-icon>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>Programa de Formación Profesional en Videojuegos</td>
+						<td class="no-wrap">Extensión Universitaria - UTN Buenos Aires</td>
+						<td>
+							<a href="https://sceu-utnba.bitrix24.es/pub/document/39352/03226bedd4d9c166f0c27217047d47e4/">
+								<fa-icon [icon]="faGlobeIcon"></fa-icon>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>Professional Full-Stack Developer</td>
+						<td class="no-wrap">U.T.N. F.R.B.A. E.L.</td>
+						<td>
+							<a href="" (click)="openUtnFullStackCert($event)">
+
+								<fa-icon [icon]="faSearchIcon"></fa-icon>
+							</a>
+						</td>
+					</tr>
+					<tr>
+						<td>Diplomatura en Java</td>
+						<td class="no-wrap">U.T.N. F.R.B.A. E.L.</td>
+						<td>
+							<a href="" (click)="openUtnJavaCert($event)">
+								<fa-icon [icon]="faSearchIcon"></fa-icon>
+							</a>
+						</td>
+					</tr>
                     <tr>
-                        <td>2020</td>
                         <td>Node: De cero a experto</td>
                         <td class="no-wrap">Udemy</td>
                         <td>
@@ -37,17 +72,6 @@
                         </td>
                     </tr>
                     <tr>
-                        <td>2021</td>
-                        <td>Analista Junior GeneXus 17</td>
-                        <td class="no-wrap">Genexus</td>
-                        <td>
-                            <a href="https://training.genexus.com/es/">
-                                <fa-icon [icon]="faGlobeIcon"></fa-icon>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2021</td>
                         <td>Diplomatura en desarrollo de videojuegos con Unity</td>
                         <td class="no-wrap">U.T.N. F.R.B.A.</td>
                         <td>
@@ -56,40 +80,8 @@
                             </a>
                         </td>
                     </tr>
-                    <tr>
-                        <td>2021</td>
-                        <td>Professional Full-Stack Developer</td>
-                        <td class="no-wrap">U.T.N. F.R.B.A. E.L.</td>
-                        <td>
-                            <a href="" (click)="openUtnFullStackCert($event)">
-
-                                <fa-icon [icon]="faSearchIcon"></fa-icon>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>Desarrollo de videojuegos con Cocos Creator</td>
-                        <td class="no-wrap">U.T.N. F.R.B.A.</td>
-                        <td>
-                            <a href="" (click)="openUtnCocosCert($event)">
-                                <fa-icon [icon]="faSearchIcon"></fa-icon>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2022</td>
-                        <td>Diplomatura en Java</td>
-                        <td class="no-wrap">U.T.N. F.R.B.A. E.L.</td>
-                        <td>
-                            <a href="" (click)="openUtnJavaCert($event)">
-                                <fa-icon [icon]="faSearchIcon"></fa-icon>
-                            </a>
-                        </td>
-                    </tr>
-
                     <tr class="table-dark text-center">
-                        <td colspan="4"><i class="cert-info">Solo se listan las ultimas certificaciones mas relevantes.
+                        <td colspan="3"><i class="cert-info">Solo se listan las ultimas certificaciones mas relevantes.
                                 Informacion completa en <a href="https://www.linkedin.com/in/cundalf/">LinkedIn</a>.</i>
                         </td>
                     </tr>

@@ -1,0 +1,32 @@
+<ng-template #ModularDroneXModal let-modal>
+	<div class="modal-header">
+		<h4 class="modal-title" id="modal-basic-title">Modular Drone X</h4>
+		<button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss()"></button>
+	</div>
+	<div class="modal-body">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-lg-10">
+
+					<img class="img-fluid rounded mb-5" src="assets/images/portfolio/modulardronex.jpg" />
+
+					<p class="mb-5 font-italic">
+						ModularDroneX es el prototipo de un juego mezcla entre un plataformero y un runner en el cual somos un Drone dentro de una simulación."
+					</p>
+
+					<p class="mb-5">
+						Este proyecto tiene el objetivo personal de aprender Unreal Engine 5. Todo fue construido con Blueprints y en la versión 5.2.1 del motor.
+						Realizado durante la primer parte del curso Experto Universitario en Unreal Engine de la UTN de Buenos Aires.
+					</p>
+
+					<div class="text-center">
+						<a class="btn btn-outline-danger btn-social mx-1" href="https://cundalf.itch.io/modulardronex"
+						   target="_blank"><fa-icon [icon]="faItchIcon"></fa-icon></a>
+						<a class="btn btn-outline-danger btn-social mx-1" href="https://youtu.be/-XG44ZKDhFg?si=Dj6gAU475qbpjujd"
+						   target="_blank"><fa-icon [icon]="faYoutube"></fa-icon></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</ng-template>
