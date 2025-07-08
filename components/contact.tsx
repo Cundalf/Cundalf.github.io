@@ -1,6 +1,6 @@
 "use client"
 
-import { Mail, Linkedin, Github, MapPin } from "lucide-react"
+import { Mail, Linkedin, Github, Gamepad2, MapPin } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { useLanguage } from "@/components/language-provider"
@@ -26,9 +26,16 @@ export function Contact() {
     {
       icon: <Github className="h-6 w-6" />,
       title: "GitHub",
-      value: "cundalf.github.io",
-      href: "https://cundalf.github.io",
+      value: "github.com/Cundalf",
+      href: "https://github.com/Cundalf",
       action: t("contact.github"),
+    },
+    {
+      icon: <Gamepad2 className="h-6 w-6" />,
+      title: "Itch.io",
+      value: "cundalf.itch.io",
+      href: "https://cundalf.itch.io/",
+      action: t("contact.itch"),
     },
   ]
 
@@ -46,7 +53,7 @@ export function Contact() {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {contactMethods.map((method, index) => (
               <Card
                 key={index}

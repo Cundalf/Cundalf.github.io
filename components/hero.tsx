@@ -23,16 +23,16 @@ export function Hero() {
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
-          <div className="mb-8 animate-fade-in-up">
+          <div className="mb-6 sm:mb-8 animate-fade-in-up">
             {/* Profile Image Container */}
-            <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-2xl overflow-hidden">
+            <div className="w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-6 sm:mb-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-2xl overflow-hidden">
               <img src="/profile.jpg" alt="Agustín Cundari" className="w-full h-full object-cover" />
             </div>
-            <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-4">Agustín Cundari</h1>
-            <h2 className="text-2xl md:text-3xl text-blue-600 dark:text-blue-400 font-semibold mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-3 sm:mb-4">Agustín Cundari</h1>
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-blue-600 dark:text-blue-400 font-semibold mb-4 sm:mb-6">
               {t("hero.title")}
             </h2>
-            <p className="text-xl text-slate-600 dark:text-slate-300 mb-8 leading-relaxed">
+            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
               {t("hero.subtitle").replace(
                 "9",
                 Math.floor(
@@ -40,12 +40,12 @@ export function Hero() {
                 ).toString(),
               )}
             </p>
-            <p className="text-lg text-slate-500 dark:text-slate-400 mb-12 max-w-2xl mx-auto">
+            <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-0">
               {t("hero.description")}
             </p>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in-up delay-300">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12 sm:mb-16 animate-fade-in-up delay-300">
             <Button
               size="lg"
               onClick={() => scrollToSection("experience")}

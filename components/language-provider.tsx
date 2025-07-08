@@ -69,6 +69,7 @@ const translations = {
     "contact.email": "Enviar email",
     "contact.linkedin": "Ver LinkedIn",
     "contact.github": "Ver GitHub",
+    "contact.itch": "Ver Itch.io",
 
     // Footer
     "footer.rights": "Todos los derechos reservados.",
@@ -130,6 +131,7 @@ const translations = {
     "contact.email": "Send email",
     "contact.linkedin": "View LinkedIn",
     "contact.github": "View GitHub",
+    "contact.itch": "View Itch.io",
 
     // Footer
     "footer.rights": "All rights reserved.",
