@@ -54,9 +54,63 @@ cat ~/.ssh/id_rsa
 
 Tu servidor debe tener:
 
-1. **Servidor Web** (Apache, Nginx, etc.)
+1. **Servidor Web** (Apache, Nginx, Caddy, etc.)
 2. **Acceso SSH** habilitado
 3. **Directorio de despliegue** creado con permisos apropiados
+
+**Nota sobre Caddy:** Caddy es especialmente recomendado para este tipo de despliegue porque:
+- Automáticamente obtiene y renueva certificados SSL/TLS
+- Configuración más simple y legible
+- Detecta automáticamente aplicaciones SPA (Single Page Applications)
+- Compresión gzip automática
+- Configuración más fácil de mantener
+
+**Ejemplo para Caddy:**
+```bash
+# Crear directorio de despliegue
+sudo mkdir -p /var/www/portfolio
+sudo chown -R tu-usuario:caddy /var/www/portfolio
+sudo chmod -R 755 /var/www/portfolio
+
+# Configurar Caddyfile
+sudo nano /etc/caddy/Caddyfile
+```
+
+**Configuración del Caddyfile:**
+```caddy
+# Ejemplo para tu dominio
+tu-dominio.com {
+    root * /var/www/portfolio
+    file_server
+    try_files {path} {path}/ /index.html
+    
+    # Opcional: Configurar headers para SPA
+    header {
+        # Cachear assets estáticos
+        Cache-Control "public, max-age=31536000" /assets/*
+        
+        # Headers de seguridad
+        X-Content-Type-Options nosniff
+        X-Frame-Options DENY
+        X-XSS-Protection "1; mode=block"
+        Referrer-Policy strict-origin-when-cross-origin
+    }
+    
+    # Opcional: Gzip compression
+    encode gzip
+    
+    # Opcional: Logs
+    log {
+        output file /var/log/caddy/portfolio.log
+        format single_field common_log
+    }
+}
+
+# Opcional: Redireccionar www a no-www
+www.tu-dominio.com {
+    redir https://tu-dominio.com{uri}
+}
+```
 
 **Ejemplo para Apache:**
 ```bash
@@ -205,6 +259,13 @@ npm run build
 
 # Analizar bundle
 npm run build:analyze
+
+# Comandos específicos para Caddy
+caddy validate --config /etc/caddy/Caddyfile    # Validar configuración
+sudo systemctl reload caddy                     # Recargar configuración
+sudo systemctl status caddy                     # Verificar estado
+sudo journalctl -u caddy -f                     # Ver logs en tiempo real
+caddy fmt --overwrite /etc/caddy/Caddyfile     # Formatear Caddyfile
 ```
 
 ## Estructura de Archivos
