@@ -1,27 +1,64 @@
-# CundalfPortfolio
+# Portfolio - Sitio Personal
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
+Portfolio personal desarrollado con Next.js y desplegado automáticamente en GitHub Pages y servidor SSH.
 
-## Development server
+## 🚀 Desarrollo y Despliegue
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+```bash
+# Desarrollar localmente
+npm run dev
 
-## Code scaffolding
+# Hacer cambios y commitear
+git add .
+git commit -m "Actualizar contenido"
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Desplegar (activa workflows automáticos)
+git push origin master
+```
 
-## Build
+El despliegue es automático: cada push a `master` actualiza tanto GitHub Pages como tu servidor SSH.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 🛠️ Comandos Disponibles
 
-## Running unit tests
+```bash
+npm run dev          # Servidor de desarrollo
+npm run build        # Construir para producción
+npm run start        # Servidor de producción
+npm run lint         # Linter
+npm run deploy:prod  # Despliegue manual a producción
+npm run deploy:staging # Despliegue manual a staging
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 📦 Despliegue Automático
 
-## Running end-to-end tests
+Cada push a `master` activa automáticamente:
+- ✅ Actualización de GitHub Pages
+- ✅ Actualización del servidor SSH
+- ✅ Creación de backups automáticos
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 🔧 Configuración
 
-## Further help
+- **GitHub Pages**: Configurado automáticamente
+- **Servidor SSH**: Requiere secretos en GitHub Actions
+- **Despliegue manual**: Requiere `deploy-config.json`
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Ver [`DEPLOYMENT.md`](DEPLOYMENT.md) para instrucciones detalladas.
+
+## 📝 Tecnologías
+
+- Next.js 15
+- React 19
+- TypeScript
+- Tailwind CSS
+- Radix UI
+- GitHub Actions
+
+## 🌐 URLs
+
+- **GitHub Pages**: `https://tu-usuario.github.io/tu-repositorio`
+- **Servidor SSH**: `https://tu-dominio.com`
+
+## 📚 Documentación
+
+- [Guía de Despliegue Completa](DEPLOYMENT.md)
+- [Configuración de Servidor](server-config-examples/) 

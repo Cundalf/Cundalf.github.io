@@ -1,0 +1,16 @@
+{
+  "produccion": {
+    "host": "tu-servidor.com",
+    "user": "usuario-ssh",
+    "port": "22",
+    "deployPath": "/var/www/html",
+    "sshKey": "~/.ssh/id_rsa"
+  },
+  "staging": {
+    "host": "staging.tu-servidor.com",
+    "user": "usuario-ssh",
+    "port": "22",
+    "deployPath": "/var/www/staging",
+    "sshKey": "~/.ssh/id_rsa"
+  }
+} 
