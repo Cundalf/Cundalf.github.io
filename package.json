@@ -7,6 +7,7 @@
     "dev": "next dev",
     "lint": "next lint",
     "start": "next start",
+    "clean": "rm -rf .next node_modules/.cache",
     "deploy:manual": "chmod +x scripts/deploy.sh && ./scripts/deploy.sh",
     "deploy:prod": "chmod +x scripts/deploy.sh && ./scripts/deploy.sh produccion",
     "deploy:staging": "chmod +x scripts/deploy.sh && ./scripts/deploy.sh staging",
