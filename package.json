@@ -6,7 +6,11 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "next start"
+    "start": "next start",
+    "deploy:manual": "chmod +x scripts/deploy.sh && ./scripts/deploy.sh",
+    "deploy:prod": "chmod +x scripts/deploy.sh && ./scripts/deploy.sh produccion",
+    "deploy:staging": "chmod +x scripts/deploy.sh && ./scripts/deploy.sh staging",
+    "build:analyze": "npm run build && npx @next/bundle-analyzer"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

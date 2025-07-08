@@ -1,0 +1,88 @@
+name: Deploy to SSH Server
+
+on:
+  push:
+    branches: ["master"]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
+    
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: "npm"
+      
+      - name: Install dependencies
+        run: npm ci
+      
+      - name: Build Next.js app
+        run: npm run build
+      
+      - name: Create deployment archive
+        run: |
+          cd out
+          tar -czf ../site.tar.gz .
+          cd ..
+      
+      - name: Deploy to Server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            # Crear directorio de backup
+            mkdir -p ~/backups
+            
+            # Backup del sitio actual si existe
+            if [ -d "${{ secrets.DEPLOY_PATH }}" ]; then
+              echo "Creando backup del sitio actual..."
+              tar -czf ~/backups/site-backup-$(date +%Y%m%d-%H%M%S).tar.gz -C ${{ secrets.DEPLOY_PATH }} .
+            fi
+            
+            # Crear directorio de despliegue si no existe
+            mkdir -p ${{ secrets.DEPLOY_PATH }}
+            
+            # Limpiar directorio de despliegue
+            rm -rf ${{ secrets.DEPLOY_PATH }}/*
+            
+            echo "Despliegue completado exitosamente"
+      
+      - name: Copy files to server
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          source: "site.tar.gz"
+          target: "/tmp/"
+      
+      - name: Extract files on server
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT }}
+          script: |
+            # Extraer archivos en el directorio de despliegue
+            cd ${{ secrets.DEPLOY_PATH }}
+            tar -xzf /tmp/site.tar.gz
+            
+            # Limpiar archivo temporal
+            rm -f /tmp/site.tar.gz
+            
+            # Establecer permisos correctos
+            chmod -R 755 ${{ secrets.DEPLOY_PATH }}
+            
+            echo "Archivos extraídos y permisos configurados" 

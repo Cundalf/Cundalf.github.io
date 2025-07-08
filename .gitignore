@@ -25,3 +25,14 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# deployment
+deploy-config.json
+site.tar.gz
+.ssh/
+*.pem
+*.key
+
+# backup files
+*.backup
+*.bak
