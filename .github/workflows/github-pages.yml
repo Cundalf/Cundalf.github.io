@@ -39,8 +39,6 @@ jobs:
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
-        with:
-          static_site_generator: next
       
       - name: Install dependencies
         run: pnpm install
@@ -50,6 +48,15 @@ jobs:
       
       - name: Build Next.js app
         run: pnpm run build
+      
+      - name: List build output
+        run: |
+          echo "Listing root directory:"
+          ls -la
+          echo "Checking if out directory exists:"
+          ls -la out/ || echo "out directory not found"
+          echo "Checking if .next directory exists:"
+          ls -la .next/ || echo ".next directory not found"
       
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
