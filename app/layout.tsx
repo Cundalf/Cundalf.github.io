@@ -34,7 +34,6 @@ export const metadata: Metadata = {
     other: [{ rel: "mask-icon", url: "/safari-pinned-tab.png", color: "#2563eb" }],
   },
   manifest: "/site.webmanifest",
-    generator: 'v0.dev'
 }
 
 export default function RootLayout({
