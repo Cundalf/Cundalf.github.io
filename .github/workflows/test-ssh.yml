@@ -17,11 +17,32 @@ jobs:
           echo "SSH_PRIVATE_KEY exists: ${{ secrets.SSH_PRIVATE_KEY != '' }}"
           echo "DEPLOY_PATH exists: ${{ secrets.DEPLOY_PATH != '' }}"
           
-          # Verificar formato de la clave
+          # Verificar formato de la clave más detallado
           if [ -n "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
-            echo "Private key starts with: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | head -1)"
-            echo "Private key ends with: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | tail -1)"
+            echo "=== PRIVATE KEY ANALYSIS ==="
+            echo "Key length: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | wc -c)"
+            echo "Key lines count: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | wc -l)"
+            echo "First line: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | head -1)"
+            echo "Last line: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | tail -1)"
+            echo "Contains BEGIN: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | grep -c 'BEGIN' || echo 'NO')"
+            echo "Contains END: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | grep -c 'END' || echo 'NO')"
+            
+            # Verificar tipo de clave
+            if echo '${{ secrets.SSH_PRIVATE_KEY }}' | grep -q 'BEGIN OPENSSH PRIVATE KEY'; then
+              echo "✅ Key type: OpenSSH format"
+            elif echo '${{ secrets.SSH_PRIVATE_KEY }}' | grep -q 'BEGIN RSA PRIVATE KEY'; then
+              echo "✅ Key type: RSA format"
+            else
+              echo "❌ Key type: Unknown or invalid format"
+            fi
+          else
+            echo "❌ SSH_PRIVATE_KEY is empty!"
           fi
+          
+          echo "=== TESTING SSH CONNECTIVITY ==="
+          echo "Host: ${{ secrets.SSH_HOST }}"
+          echo "Port: ${{ secrets.SSH_PORT }}"
+          echo "User: ${{ secrets.SSH_USER }}"
       
       - name: Test SSH Connection
         uses: appleboy/ssh-action@v1.0.3
