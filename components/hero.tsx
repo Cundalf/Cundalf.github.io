@@ -24,11 +24,9 @@ export function Hero() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-4xl mx-auto">
           <div className="mb-8 animate-fade-in-up">
-            {/* Profile Image Container - Ready for image */}
+            {/* Profile Image Container */}
             <div className="w-32 h-32 mx-auto mb-8 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-4xl font-bold shadow-2xl overflow-hidden">
-              {/* Replace this with an image when ready */}
-              {/* <img src="/profile-image.jpg" alt="Agustín Cundari" className="w-full h-full object-cover" /> */}
-              AC
+              <img src="/profile.jpg" alt="Agustín Cundari" className="w-full h-full object-cover" />
             </div>
             <h1 className="text-5xl md:text-7xl font-bold text-slate-900 dark:text-white mb-4">Agustín Cundari</h1>
             <h2 className="text-2xl md:text-3xl text-blue-600 dark:text-blue-400 font-semibold mb-6">
