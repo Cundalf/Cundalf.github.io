@@ -42,31 +42,29 @@ jobs:
           cd out
           tar -czf ../site.tar.gz .
           cd ..
+          ls -la site.tar.gz
       
-      - name: Deploy to Server
+      - name: Debug SSH Configuration
+        run: |
+          echo "SSH_HOST: ${{ secrets.SSH_HOST }}"
+          echo "SSH_USER: ${{ secrets.SSH_USER }}"
+          echo "SSH_PORT: ${{ secrets.SSH_PORT }}"
+          echo "DEPLOY_PATH: ${{ secrets.DEPLOY_PATH }}"
+          echo "SSH_PRIVATE_KEY configured: ${{ secrets.SSH_PRIVATE_KEY != '' }}"
+      
+      - name: Test SSH Connection
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
+          debug: true
           script: |
-            # Crear directorio de backup
-            mkdir -p ~/backups
-            
-            # Backup del sitio actual si existe
-            if [ -d "${{ secrets.DEPLOY_PATH }}" ]; then
-              echo "Creando backup del sitio actual..."
-              tar -czf ~/backups/site-backup-$(date +%Y%m%d-%H%M%S).tar.gz -C ${{ secrets.DEPLOY_PATH }} .
-            fi
-            
-            # Crear directorio de despliegue si no existe
-            mkdir -p ${{ secrets.DEPLOY_PATH }}
-            
-            # Limpiar directorio de despliegue
-            rm -rf ${{ secrets.DEPLOY_PATH }}/*
-            
-            echo "Despliegue completado exitosamente"
+            echo "SSH connection successful!"
+            whoami
+            pwd
+            ls -la
       
       - name: Copy files to server
         uses: appleboy/scp-action@v0.1.7
@@ -77,23 +75,57 @@ jobs:
           port: ${{ secrets.SSH_PORT }}
           source: "site.tar.gz"
           target: "/tmp/"
+          debug: true
       
-      - name: Extract files on server
+      - name: Deploy to Server
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           port: ${{ secrets.SSH_PORT }}
+          debug: true
           script: |
-            # Extraer archivos en el directorio de despliegue
-            cd ${{ secrets.DEPLOY_PATH }}
-            tar -xzf /tmp/site.tar.gz
+            echo "Iniciando despliegue..."
             
-            # Limpiar archivo temporal
-            rm -f /tmp/site.tar.gz
+            # Crear directorio de backup
+            mkdir -p ~/backups
             
-            # Establecer permisos correctos
-            chmod -R 755 ${{ secrets.DEPLOY_PATH }}
+            # Backup del sitio actual si existe
+            if [ -d "${{ secrets.DEPLOY_PATH }}" ]; then
+              echo "Creando backup del sitio actual..."
+              tar -czf ~/backups/site-backup-$(date +%Y%m%d-%H%M%S).tar.gz -C ${{ secrets.DEPLOY_PATH }} .
+              echo "Backup creado exitosamente"
+            fi
             
-            echo "Archivos extraídos y permisos configurados" 
+            # Crear directorio de despliegue si no existe
+            mkdir -p ${{ secrets.DEPLOY_PATH }}
+            
+            # Limpiar directorio de despliegue
+            echo "Limpiando directorio de despliegue..."
+            rm -rf ${{ secrets.DEPLOY_PATH }}/*
+            
+            # Verificar que el archivo se copió
+            if [ -f "/tmp/site.tar.gz" ]; then
+              echo "Archivo encontrado en /tmp/site.tar.gz"
+              ls -la /tmp/site.tar.gz
+              
+              # Extraer archivos en el directorio de despliegue
+              echo "Extrayendo archivos..."
+              cd ${{ secrets.DEPLOY_PATH }}
+              tar -xzf /tmp/site.tar.gz
+              
+              # Limpiar archivo temporal
+              rm -f /tmp/site.tar.gz
+              
+              # Establecer permisos correctos
+              chmod -R 755 ${{ secrets.DEPLOY_PATH }}
+              
+              echo "Archivos extraídos y permisos configurados"
+              ls -la ${{ secrets.DEPLOY_PATH }}
+              
+              echo "Despliegue completado exitosamente"
+            else
+              echo "Error: No se encontró el archivo en /tmp/site.tar.gz"
+              exit 1
+            fi 
