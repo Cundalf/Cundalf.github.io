@@ -9,8 +9,12 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    unoptimized: true
+    unoptimized: true,
+  },
+  // Explicitly specify any experimental features we need
+  experimental: {
+    // Add any experimental features here if needed
   }
-}
+};
 
-export default nextConfig
+export default nextConfig;
