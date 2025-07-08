@@ -1,0 +1,40 @@
+name: Test SSH Connection
+
+on:
+  workflow_dispatch:
+
+jobs:
+  test-ssh:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Debug SSH Configuration
+        run: |
+          echo "=== DEBUG SSH CONFIGURATION ==="
+          echo "SSH_HOST exists: ${{ secrets.SSH_HOST != '' }}"
+          echo "SSH_USER exists: ${{ secrets.SSH_USER != '' }}"
+          echo "SSH_PORT exists: ${{ secrets.SSH_PORT != '' }}"
+          echo "SSH_PRIVATE_KEY exists: ${{ secrets.SSH_PRIVATE_KEY != '' }}"
+          echo "DEPLOY_PATH exists: ${{ secrets.DEPLOY_PATH != '' }}"
+          
+          # Verificar formato de la clave
+          if [ -n "${{ secrets.SSH_PRIVATE_KEY }}" ]; then
+            echo "Private key starts with: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | head -1)"
+            echo "Private key ends with: $(echo '${{ secrets.SSH_PRIVATE_KEY }}' | tail -1)"
+          fi
+      
+      - name: Test SSH Connection
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          port: ${{ secrets.SSH_PORT || '22' }}
+          debug: true
+          script: |
+            echo "✅ SSH connection successful!"
+            echo "Server info:"
+            whoami
+            hostname
+            pwd
+            ls -la ~ 
