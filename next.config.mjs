@@ -11,10 +11,6 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Explicitly specify any experimental features we need
-  experimental: {
-    // Add any experimental features here if needed
-  }
 };
 
 export default nextConfig;
