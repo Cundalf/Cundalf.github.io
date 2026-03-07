@@ -12,37 +12,37 @@ export function Skills() {
       title: t("skills.frontend"),
       icon: <Code className="h-8 w-8" />,
       skills: ["JavaScript", "TypeScript", "React", "Angular", "HTML5", "CSS3", "jQuery", "Bootstrap"],
-      color: "from-blue-500 to-cyan-500",
+      color: "from-indigo-500 to-cyan-500",
     },
     {
       title: t("skills.backend"),
       icon: <Layers className="h-8 w-8" />,
       skills: ["Node.js", "PHP", "Python", "C#", "Java", "Visual Basic"],
-      color: "from-green-500 to-emerald-500",
+      color: "from-emerald-500 to-teal-500",
     },
     {
       title: t("skills.database"),
       icon: <Database className="h-8 w-8" />,
       skills: ["MySQL", "SQLite", "Redis", "Intersystems Cache"],
-      color: "from-purple-500 to-violet-500",
+      color: "from-slate-600 to-slate-400",
     },
     {
       title: t("skills.devops"),
       icon: <Cloud className="h-8 w-8" />,
-      skills: ["AWS (EC2, ECS)", "Docker", "Kubernetes", "GitLab CI/CD", "Linux", "DevOps"],
-      color: "from-orange-500 to-red-500",
+      skills: ["AWS (EC2, ECS, Spot Instances)", "Docker", "Kubernetes", "GitLab CI/CD", "Linux", "DevOps", "Cost Optimization"],
+      color: "from-sky-500 to-indigo-500",
     },
     {
       title: t("skills.gamedev"),
       icon: <Gamepad2 className="h-8 w-8" />,
       skills: ["Unity", "Unreal Engine 4/5", "C#", "Game Design", "Cocos Creator"],
-      color: "from-pink-500 to-rose-500",
+      color: "from-violet-500 to-fuchsia-500",
     },
     {
       title: t("skills.other"),
       icon: <Settings className="h-8 w-8" />,
-      skills: ["Git", "Scrum", "OpenAI", "ELK Stack", "Celery", "GeneXus"],
-      color: "from-slate-500 to-gray-500",
+      skills: ["AI Workflows", "LLMs", "Prompt Engineering", "Git", "Scrum", "ELK Stack", "Celery", "GeneXus"],
+      color: "from-zinc-500 to-stone-500",
     },
   ]
 
@@ -51,7 +51,7 @@ export function Skills() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">{t("skills.title")}</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-indigo-600 mx-auto rounded-full" />
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
@@ -70,7 +70,7 @@ export function Skills() {
                   {category.skills.map((skill, skillIndex) => (
                     <span
                       key={skillIndex}
-                      className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-slate-200 dark:border-slate-600 hover:border-blue-300 dark:hover:border-blue-500 transition-colors"
+                      className="px-3 py-1 bg-white dark:bg-slate-700 text-slate-700 dark:text-slate-300 text-sm rounded-full border border-slate-200 dark:border-slate-600 hover:border-indigo-300 dark:hover:border-indigo-500 transition-colors"
                     >
                       {skill}
                     </span>

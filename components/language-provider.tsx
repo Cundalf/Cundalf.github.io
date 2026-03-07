@@ -7,7 +7,7 @@ type Language = "es" | "en"
 interface LanguageContextType {
   language: Language
   setLanguage: (lang: Language) => void
-  t: (key: string) => string
+  t: (key: string, params?: Record<string, string | number>) => string
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined)
@@ -18,36 +18,37 @@ const translations = {
     "nav.experience": "Experiencia",
     "nav.skills": "Habilidades",
     "nav.certifications": "Certificaciones",
+
     "nav.contact": "Contacto",
 
     // Hero
-    "hero.title": "Desarrollador Full Stack",
-    "hero.subtitle": "Creando soluciones digitales innovadoras con más de 9 años de experiencia",
+    "hero.title": "Problem Solver & Software Engineer",
+    "hero.subtitle": "Especialista en desarrollo, infraestructura, escalabilidad e IA. +{years} años de experiencia.",
     "hero.description":
-      "Soy una persona curiosa, comprometida y con mucha predisposición para el aprendizaje. Me apasiona resolver problemas y buscar soluciones que realmente hagan la diferencia.",
+      "Soy una 'navaja suiza' tecnológica. Diseño, desarrollo, automatizo, pruebo y mantengo infraestructuras. Me enfoco en resolver problemas complejos, optimizar recursos y liderar equipos hacia la excelencia técnica.",
     "hero.cta": "Ver mi trabajo",
     "hero.contact": "Contactar",
 
     // Experience
     "experience.title": "Experiencia Profesional",
     "experience.current": "Actual",
-    "experience.grupo-esfera.title": "Desarrollador de Software",
+    "experience.grupo-esfera.title": "Referente Técnico & Software Engineer",
     "experience.grupo-esfera.company": "Grupo Esfera",
     "experience.grupo-esfera.period": "Enero 2022 - Presente",
     "experience.grupo-esfera.description":
-      "Desarrollo de aplicaciones web y sistemas empresariales utilizando tecnologías modernas. Implementación de CI/CD, DevOps y arquitecturas cloud.",
+      "Implementación de flujos de IA y chatbots seguros y escalables. Optimización de costos de infraestructura. Diseño de CI/CD con runners en instancias spot de AWS (reducción de tiempos en 45% y costos en 30%). Referente técnico y capacitador interno en IA.",
 
-    "experience.freelance.title": "Desarrollador Freelance",
+    "experience.freelance.title": "Arquitecto de Soluciones & Desarrollador",
     "experience.freelance.company": "Profesional Independiente",
     "experience.freelance.period": "Julio 2024 - Octubre 2024",
     "experience.freelance.description":
-      "Desarrollo de sistema de monitoreo y estadísticas utilizando el Stack ELK con Python, Celery y Redis.",
+      "Diseño y desarrollo de sistema robusto de monitoreo y estadísticas utilizando el Stack ELK con Python, Celery y Redis para resolver cuellos de botella de datos.",
 
-    "experience.lomas.title": "Desarrollador de Software",
+    "experience.lomas.title": "Full Stack Developer & Team Lead",
     "experience.lomas.company": "Sanatorio Las Lomas S.A.",
     "experience.lomas.period": "Febrero 2015 - Enero 2022",
     "experience.lomas.description":
-      "Desarrollo y mantenimiento de aplicaciones, servicios y bases de datos. Coordinación de equipo de desarrollo de hasta 3 personas.",
+      "Desarrollo, mantenimiento y modernización de aplicaciones, servicios de salud y bases de datos. Coordinación de equipo de desarrollo técnico de hasta 3 personas.",
 
     // Skills
     "skills.title": "Habilidades Técnicas",
@@ -80,36 +81,37 @@ const translations = {
     "nav.experience": "Experience",
     "nav.skills": "Skills",
     "nav.certifications": "Certifications",
+
     "nav.contact": "Contact",
 
     // Hero
-    "hero.title": "Full Stack Developer",
-    "hero.subtitle": "Creating innovative digital solutions with over 9 years of experience",
+    "hero.title": "Problem Solver & Software Engineer",
+    "hero.subtitle": "Specialist in development, infrastructure, scalability, and AI. +{years} years of experience.",
     "hero.description":
-      "I am a curious, committed person with a great predisposition for learning. I am passionate about solving problems and finding solutions that really make a difference.",
+      "I am a technological 'Swiss Army knife'. I design, develop, automate, test, and maintain infrastructure. I focus on solving complex problems, optimizing resources, and leading teams to technical excellence.",
     "hero.cta": "View my work",
     "hero.contact": "Contact me",
 
     // Experience
     "experience.title": "Professional Experience",
     "experience.current": "Current",
-    "experience.grupo-esfera.title": "Software Developer",
+    "experience.grupo-esfera.title": "Technical Lead & Software Engineer",
     "experience.grupo-esfera.company": "Grupo Esfera",
     "experience.grupo-esfera.period": "January 2022 - Present",
     "experience.grupo-esfera.description":
-      "Development of web applications and enterprise systems using modern technologies. Implementation of CI/CD, DevOps and cloud architectures.",
+      "Implementation of secure and scalable AI workflows and chatbots. Infrastructure cost optimization. CI/CD design with AWS spot instances runners (reducing deploy times by 45% and costs by 30%). Technical reference and internal AI trainer.",
 
-    "experience.freelance.title": "Freelance Developer",
+    "experience.freelance.title": "Solutions Architect & Developer",
     "experience.freelance.company": "Self-employed",
     "experience.freelance.period": "July 2024 - October 2024",
     "experience.freelance.description":
-      "Development of monitoring and statistics system using ELK Stack with Python, Celery and Redis.",
+      "Design and development of a robust monitoring and statistics system using the ELK Stack with Python, Celery and Redis to solve data bottlenecks.",
 
-    "experience.lomas.title": "Software Developer",
+    "experience.lomas.title": "Full Stack Developer & Team Lead",
     "experience.lomas.company": "Sanatorio Las Lomas S.A.",
     "experience.lomas.period": "February 2015 - January 2022",
     "experience.lomas.description":
-      "Development and maintenance of applications, services and databases. Team coordination of up to 3 developers.",
+      "Development, maintenance, and modernization of healthcare applications, services, and databases. Technical coordination of a development team of up to 3 developers.",
 
     // Skills
     "skills.title": "Technical Skills",
@@ -152,8 +154,14 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     }
   }, [])
 
-  const t = (key: string): string => {
-    return translations[language][key as keyof (typeof translations)["es"]] || key
+  const t = (key: string, params?: Record<string, string | number>): string => {
+    let translation = (translations[language] as any)[key] || key
+    if (params) {
+      Object.entries(params).forEach(([k, v]) => {
+        translation = translation.replace(`{${k}}`, v.toString())
+      })
+    }
+    return translation
   }
 
   return <LanguageContext.Provider value={{ language, setLanguage, t }}>{children}</LanguageContext.Provider>

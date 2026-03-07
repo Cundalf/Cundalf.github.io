@@ -1,64 +1,19 @@
-# Portfolio - Sitio Personal
+# Portfolio - Agustín Cundari
 
-Portfolio personal desarrollado con Next.js y desplegado automáticamente en GitHub Pages y servidor SSH.
+Mantenimiento y desarrollo de mi sitio personal.
 
-## 🚀 Desarrollo y Despliegue
-
-```bash
-# Desarrollar localmente
-npm run dev
-
-# Hacer cambios y commitear
-git add .
-git commit -m "Actualizar contenido"
-
-# Desplegar (activa workflows automáticos)
-git push origin master
-```
-
-El despliegue es automático: cada push a `master` actualiza tanto GitHub Pages como tu servidor SSH.
-
-## 🛠️ Comandos Disponibles
+## 🚀 Inicio Rápido
 
 ```bash
-npm run dev          # Servidor de desarrollo
-npm run build        # Construir para producción
-npm run start        # Servidor de producción
-npm run lint         # Linter
-npm run deploy:prod  # Despliegue manual a producción
-npm run deploy:staging # Despliegue manual a staging
+npm run dev    # Desarrollo (http://localhost:3000)
+npm run build  # Build de producción
 ```
 
-## 📦 Despliegue Automático
-
-Cada push a `master` activa automáticamente:
-- ✅ Actualización de GitHub Pages
-- ✅ Actualización del servidor SSH
-- ✅ Creación de backups automáticos
-
-## 🔧 Configuración
-
-- **GitHub Pages**: Configurado automáticamente
-- **Servidor SSH**: Requiere secretos en GitHub Actions
-- **Despliegue manual**: Requiere `deploy-config.json`
-
-Ver [`DEPLOYMENT.md`](DEPLOYMENT.md) para instrucciones detalladas.
+## 📦 Despliegue
+El sitio se despliega automáticamente en **GitHub Pages** al hacer push a `master`.
+Para información detallada sobre configuración de servidores y troubleshooting, ver [DEPLOYMENT.md](DEPLOYMENT.md).
 
 ## 📝 Tecnologías
-
-- Next.js 15
-- React 19
-- TypeScript
-- Tailwind CSS
-- Radix UI
-- GitHub Actions
-
-## 🌐 URLs
-
-- **GitHub Pages**: `https://tu-usuario.github.io/tu-repositorio`
-- **Servidor SSH**: `https://tu-dominio.com`
-
-## 📚 Documentación
-
-- [Guía de Despliegue Completa](DEPLOYMENT.md)
-- [Configuración de Servidor](server-config-examples/) 
+- Next.js 15 + React 19
+- TypeScript + Tailwind CSS
+- Lucide React + Radix UI

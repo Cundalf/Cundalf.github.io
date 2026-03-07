@@ -42,33 +42,32 @@ export function Experience() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-slate-900 dark:text-white mb-4">{t("experience.title")}</h2>
-          <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full" />
+          <div className="w-24 h-1 bg-indigo-600 mx-auto rounded-full" />
         </div>
 
         <div className="max-w-4xl mx-auto">
           <div className="relative">
             {/* Timeline line */}
-            <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-blue-200 dark:bg-blue-800" />
+            <div className="absolute left-6 sm:left-8 top-0 bottom-0 w-0.5 bg-indigo-200 dark:bg-indigo-800" />
 
-            <div className="space-y-8">
+            <div className="space-y-12 sm:space-y-16">
               {experiences.map((exp, index) => (
                 <div key={index} className="relative flex items-start">
                   {/* Timeline dot */}
                   <div
-                    className={`absolute left-6 w-4 h-4 rounded-full border-4 ${
-                      exp.current
-                        ? "bg-blue-600 border-blue-600"
-                        : "bg-white dark:bg-slate-900 border-blue-300 dark:border-blue-700"
-                    }`}
+                    className={`absolute left-4 sm:left-6 w-4 h-4 rounded-full border-4 ${exp.current
+                      ? "bg-indigo-600 border-indigo-600"
+                      : "bg-white dark:bg-slate-900 border-indigo-300 dark:border-indigo-700"
+                      }`}
                   />
 
-                  <div className="ml-16 w-full">
+                  <div className="ml-12 sm:ml-16 w-full">
                     <Card className="hover:shadow-lg transition-shadow duration-300">
                       <CardHeader>
                         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
                           <div>
                             <CardTitle className="text-xl text-slate-900 dark:text-white">{exp.title}</CardTitle>
-                            <CardDescription className="text-lg font-semibold text-blue-600 dark:text-blue-400">
+                            <CardDescription className="text-lg font-semibold text-indigo-600 dark:text-indigo-400">
                               {exp.company}
                             </CardDescription>
                           </div>
@@ -95,7 +94,7 @@ export function Experience() {
                           {exp.technologies.map((tech, techIndex) => (
                             <span
                               key={techIndex}
-                              className="px-3 py-1 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 text-sm rounded-full"
+                              className="px-3 py-1 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 text-sm rounded-full"
                             >
                               {tech}
                             </span>

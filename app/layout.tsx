@@ -5,24 +5,28 @@ import "./globals.css"
 
 const inter = Inter({ subsets: ["latin"] })
 
+const yearsOfExperience = Math.floor(
+  (new Date().getTime() - new Date("2015-02-01").getTime()) / (1000 * 60 * 60 * 24 * 365.25),
+)
+
 export const metadata: Metadata = {
-  title: "Agustín Cundari - Full Stack Developer",
-  description: "Desarrollador Full Stack con más de 9 años de experiencia creando soluciones digitales innovadoras",
-  keywords: ["desarrollador", "full stack", "javascript", "react", "node.js", "python", "aws"],
+  title: "Agustín Cundari - Problem Solver & Software Engineer",
+  description: `Ingeniero de Software y 'Navaja Suiza' tecnológica con más de ${yearsOfExperience} años de experiencia. Especialista en IA, CI/CD, infraestructura y optimización.`,
+  keywords: ["Problem Solver", "Ingeniero de Software", "Software Engineer", "Desarrollador Full Stack", "Arquitecto de Soluciones", "Inteligencia Artificial", "CI/CD", "DevOps", "AWS", "Cost Optimization", "JavaScript", "React", "Node.js", "Python"],
   authors: [{ name: "Agustín Cundari" }],
   creator: "Agustín Cundari",
   openGraph: {
     type: "website",
     locale: "es_AR",
     url: "https://cundalf.github.io",
-    title: "Agustín Cundari - Full Stack Developer",
-    description: "Desarrollador Full Stack con más de 9 años de experiencia creando soluciones digitales innovadoras",
+    title: "Agustín Cundari - Problem Solver & Software Engineer",
+    description: `Ingeniero de Software y 'Navaja Suiza' tecnológica con más de ${yearsOfExperience} años de experiencia. Especialista en IA, CI/CD, infraestructura y optimización.`,
     siteName: "Agustín Cundari Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Agustín Cundari - Full Stack Developer",
-    description: "Desarrollador Full Stack con más de 9 años de experiencia creando soluciones digitales innovadoras",
+    title: "Agustín Cundari - Problem Solver & Software Engineer",
+    description: `Ingeniero de Software y 'Navaja Suiza' tecnológica con más de ${yearsOfExperience} años de experiencia. Especialista en IA, CI/CD, infraestructura y optimización.`,
   },
   icons: {
     icon: [
@@ -44,8 +48,34 @@ export default function RootLayout({
   return (
     <html lang="es" suppressHydrationWarning>
       <head>
-        <meta name="theme-color" content="#2563eb" />
-        <meta name="msapplication-TileColor" content="#2563eb" />
+        <meta name="theme-color" content="#4f46e5" />
+        <meta name="msapplication-TileColor" content="#4f46e5" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: "Agustín Cundari",
+              url: "https://cundalf.github.io",
+              jobTitle: "Software Engineer & Problem Solver",
+              sameAs: [
+                "https://github.com/Cundalf"
+              ],
+              knowsAbout: [
+                "Software Engineering",
+                "Artificial Intelligence",
+                "AWS",
+                "CI/CD",
+                "DevOps",
+                "Cost Optimization",
+                "Cloud Architecture",
+                "Frontend Development",
+                "Backend Development"
+              ],
+            }),
+          }}
+        />
       </head>
       <body className={inter.className}>{children}</body>
     </html>
