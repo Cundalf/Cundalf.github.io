@@ -18,15 +18,6 @@ export function Experience() {
       technologies: ["OpenAI", "GitLab", "CI/CD", "AWS EC2", "AWS ECS", "Docker", "DevOps"],
     },
     {
-      title: t("experience.freelance.title"),
-      company: t("experience.freelance.company"),
-      period: t("experience.freelance.period"),
-      description: t("experience.freelance.description"),
-      location: "Remote",
-      current: false,
-      technologies: ["ELK Stack", "Python", "Celery", "Redis", "Kubernetes"],
-    },
-    {
       title: t("experience.lomas.title"),
       company: t("experience.lomas.company"),
       period: t("experience.lomas.period"),

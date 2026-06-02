@@ -1,6 +1,7 @@
 "use client"
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
+import { About } from "@/components/about"
 import { Experience } from "@/components/experience"
 import { Skills } from "@/components/skills"
 import { Certifications } from "@/components/certifications"
@@ -16,6 +17,7 @@ export default function Portfolio() {
         <Header />
         <main>
           <Hero />
+          <About />
           <Experience />
           <Skills />
           <Certifications />

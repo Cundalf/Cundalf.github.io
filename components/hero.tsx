@@ -15,7 +15,7 @@ export function Hero() {
   }
 
   return (
-    <section className="pt-16 min-h-screen flex items-center justify-center relative overflow-hidden">
+    <section className="pt-24 pb-20 sm:pt-32 sm:pb-28 flex items-center justify-center relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-50 to-slate-100 dark:from-slate-950 dark:to-slate-900" />
       <div className="absolute top-1/4 left-1/4 w-72 h-72 bg-indigo-200 dark:bg-indigo-900 rounded-full mix-blend-multiply dark:mix-blend-screen filter blur-xl opacity-30 animate-pulse" />
@@ -32,15 +32,12 @@ export function Hero() {
             <h2 className="text-xl sm:text-2xl md:text-3xl text-indigo-600 dark:text-indigo-400 font-semibold mb-4 sm:mb-6">
               {t("hero.title")}
             </h2>
-            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-6 sm:mb-8 leading-relaxed px-4 sm:px-0">
+            <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-8 sm:mb-12 leading-relaxed px-4 sm:px-0">
               {t("hero.subtitle", {
                 years: Math.floor(
                   (new Date().getTime() - new Date("2015-02-01").getTime()) / (1000 * 60 * 60 * 24 * 365.25),
                 ),
               })}
-            </p>
-            <p className="text-base sm:text-lg text-slate-500 dark:text-slate-400 mb-8 sm:mb-12 max-w-2xl mx-auto px-4 sm:px-0">
-              {t("hero.description")}
             </p>
           </div>
 

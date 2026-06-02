@@ -22,10 +22,12 @@ const translations = {
     "nav.contact": "Contacto",
 
     // Hero
-    "hero.title": "Problem Solver & Software Engineer",
-    "hero.subtitle": "Especialista en desarrollo, infraestructura, escalabilidad e IA. +{years} años de experiencia.",
-    "hero.description":
-      "Soy una 'navaja suiza' tecnológica. Diseño, desarrollo, automatizo, pruebo y mantengo infraestructuras. Me enfoco en resolver problemas complejos, optimizar recursos y liderar equipos hacia la excelencia técnica.",
+    "hero.title": "Software Engineer · Seguridad en IA · Full Stack",
+    "hero.subtitle": "+{years} años de experiencia.",
+    "about.line1":
+      "Perfil en T: construyo sistemas de punta a punta — frontend, backend, infraestructura, seguridad y CI/CD.",
+    "about.line2":
+      "Me especializo en seguridad aplicada a IA: diseño y testeo flujos y chatbots pensando primero en cómo pueden romperse. Referente técnico y capacitador dentro de los equipos.",
     "hero.cta": "Ver mi trabajo",
     "hero.contact": "Contactar",
 
@@ -36,7 +38,7 @@ const translations = {
     "experience.grupo-esfera.company": "Grupo Esfera",
     "experience.grupo-esfera.period": "Enero 2022 - Presente",
     "experience.grupo-esfera.description":
-      "Implementación de flujos de IA y chatbots seguros y escalables. Optimización de costos de infraestructura. Diseño de CI/CD con runners en instancias spot de AWS (reducción de tiempos en 45% y costos en 30%). Referente técnico y capacitador interno en IA.",
+      "Implementación de flujos de IA y chatbots seguros y escalables. Optimización de costos de infraestructura. Diseño de CI/CD con runners en instancias spot de AWS (reducción de tiempos en aproximadamente 45% y costos en aproximadamente 30%). Referente técnico y capacitador interno en IA.",
 
     "experience.freelance.title": "Arquitecto de Soluciones & Desarrollador",
     "experience.freelance.company": "Profesional Independiente",
@@ -54,9 +56,9 @@ const translations = {
     "skills.title": "Habilidades Técnicas",
     "skills.frontend": "Frontend",
     "skills.backend": "Backend",
+    "skills.security": "Seguridad en IA",
     "skills.database": "Bases de Datos",
     "skills.devops": "DevOps & Cloud",
-    "skills.gamedev": "Desarrollo de Juegos",
     "skills.other": "Otros Conocimientos",
 
     // Certifications
@@ -85,10 +87,12 @@ const translations = {
     "nav.contact": "Contact",
 
     // Hero
-    "hero.title": "Problem Solver & Software Engineer",
-    "hero.subtitle": "Specialist in development, infrastructure, scalability, and AI. +{years} years of experience.",
-    "hero.description":
-      "I am a technological 'Swiss Army knife'. I design, develop, automate, test, and maintain infrastructure. I focus on solving complex problems, optimizing resources, and leading teams to technical excellence.",
+    "hero.title": "Software Engineer · AI Security · Full Stack",
+    "hero.subtitle": "+{years} years of experience.",
+    "about.line1":
+      "T-shaped profile: I build systems end-to-end — frontend, backend, infrastructure, security and CI/CD.",
+    "about.line2":
+      "I specialize in AI security: designing and testing flows and chatbots by thinking first about how they can break. Technical reference and trainer within teams.",
     "hero.cta": "View my work",
     "hero.contact": "Contact me",
 
@@ -99,7 +103,7 @@ const translations = {
     "experience.grupo-esfera.company": "Grupo Esfera",
     "experience.grupo-esfera.period": "January 2022 - Present",
     "experience.grupo-esfera.description":
-      "Implementation of secure and scalable AI workflows and chatbots. Infrastructure cost optimization. CI/CD design with AWS spot instances runners (reducing deploy times by 45% and costs by 30%). Technical reference and internal AI trainer.",
+      "Implementation of secure and scalable AI workflows and chatbots. Infrastructure cost optimization. CI/CD design with AWS spot instances runners (reducing deploy times by approximately 45% and costs by approximately 30%). Technical reference and internal AI trainer.",
 
     "experience.freelance.title": "Solutions Architect & Developer",
     "experience.freelance.company": "Self-employed",
@@ -117,9 +121,9 @@ const translations = {
     "skills.title": "Technical Skills",
     "skills.frontend": "Frontend",
     "skills.backend": "Backend",
+    "skills.security": "AI Security",
     "skills.database": "Databases",
     "skills.devops": "DevOps & Cloud",
-    "skills.gamedev": "Game Development",
     "skills.other": "Other Knowledge",
 
     // Certifications

@@ -1,6 +1,6 @@
 "use client"
 
-import { Code, Database, Cloud, Gamepad2, Settings, Layers } from "lucide-react"
+import { Code, Database, Cloud, Shield, Settings, Layers } from "lucide-react"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { useLanguage } from "@/components/language-provider"
 
@@ -17,31 +17,31 @@ export function Skills() {
     {
       title: t("skills.backend"),
       icon: <Layers className="h-8 w-8" />,
-      skills: ["Node.js", "PHP", "Python", "C#", "Java", "Visual Basic"],
+      skills: ["Java", "Node.js", "PHP", "Python", "C#", "Visual Basic"],
       color: "from-emerald-500 to-teal-500",
     },
     {
-      title: t("skills.database"),
-      icon: <Database className="h-8 w-8" />,
-      skills: ["MySQL", "SQLite", "Redis", "Intersystems Cache"],
-      color: "from-slate-600 to-slate-400",
+      title: t("skills.security"),
+      icon: <Shield className="h-8 w-8" />,
+      skills: ["Red-Teaming de LLMs", "Promptfoo", "Testing de prompts", "Flujos de IA seguros", "Hardening (en progreso)"],
+      color: "from-rose-500 to-orange-500",
     },
     {
       title: t("skills.devops"),
       icon: <Cloud className="h-8 w-8" />,
-      skills: ["AWS (EC2, ECS, Spot Instances)", "Docker", "Kubernetes", "GitLab CI/CD", "Linux", "DevOps", "Cost Optimization"],
+      skills: ["AWS (EC2, ECS, Spot Instances)", "Docker", "Kubernetes", "GitLab CI/CD", "Linux", "Cost Optimization"],
       color: "from-sky-500 to-indigo-500",
     },
     {
-      title: t("skills.gamedev"),
-      icon: <Gamepad2 className="h-8 w-8" />,
-      skills: ["Unity", "Unreal Engine 4/5", "C#", "Game Design", "Cocos Creator"],
-      color: "from-violet-500 to-fuchsia-500",
+      title: t("skills.database"),
+      icon: <Database className="h-8 w-8" />,
+      skills: ["PostgreSQL", "MySQL", "SQLite", "Redis", "Intersystems Cache"],
+      color: "from-slate-600 to-slate-400",
     },
     {
       title: t("skills.other"),
       icon: <Settings className="h-8 w-8" />,
-      skills: ["AI Workflows", "LLMs", "Prompt Engineering", "Git", "Scrum", "ELK Stack", "Celery", "GeneXus"],
+      skills: ["AI Workflows", "LLMs", "Prompt Engineering", "Git", "Scrum", "ELK Stack", "Celery", "GeneXus", "Unity", "Unreal Engine 4/5", "Game Design"],
       color: "from-zinc-500 to-stone-500",
     },
   ]
